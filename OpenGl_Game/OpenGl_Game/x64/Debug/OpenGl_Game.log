@@ -1,24 +1,32 @@
-﻿  Circle.cpp
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\Circle.cpp(59,49): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  CameraManager.cpp
   GLU_Object.cpp
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(52,36): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(52,41): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(52,46): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(53,36): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(53,41): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\GLU_Object.cpp(53,46): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
-  Line_18.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(51,36): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(51,41): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(51,46): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(52,36): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(52,41): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp(52,46): warning C4305: '초기화 중': 'double'에서 'GLfloat'(으)로 잘립니다.
+  Gun.cpp
+  KeyManager.cpp
   main.cpp
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(36,38): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(132,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(263,51): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(263,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(263,41): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\main.cpp(266,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(86,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(216,51): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(216,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(216,41): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(219,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(387,65): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(388,37): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Model.cpp
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\Model.cpp(2,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\Model.cpp(184,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\Model.cpp(267,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(2,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(142,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(222,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster.cpp
+  MouseManager.cpp
+  Object.cpp
+  Player.cpp
   Polygon_18.cpp
+  Rifle.cpp
+  SceneManager.cpp
+  TimeManager.cpp
   코드를 생성하고 있습니다...
-  OpenGl_Game.vcxproj -> C:\Users\이종현\source\repos_2024_2\OGGAME\OpenGl_Game\x64\Debug\OpenGl_Game.exe
+  OpenGl_Game.vcxproj -> C:\Users\Programmer\OpenGL_Game\OpenGl_Game\x64\Debug\OpenGl_Game.exe

@@ -133,18 +133,33 @@
     <ClInclude Include="component_18.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="GLU_Object.h" />
+    <ClInclude Include="Gun.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Model.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="MouseManager.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Polygon_18.h" />
+    <ClInclude Include="Rifle.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CameraManager.cpp" />
     <ClCompile Include="GLU_Object.cpp" />
+    <ClCompile Include="Gun.cpp" />
+    <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="MouseManager.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Polygon_18.cpp" />
+    <ClCompile Include="Rifle.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="cube.obj">

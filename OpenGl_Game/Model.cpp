@@ -18,13 +18,13 @@ float Random_0_to_1f_model() {
 }
 
 Model::Model()
-    : _face_on_1(10)
-    , _face_on_2(10)
-    , _type(Model_Type::Type_non)
+    :
+    _type(Model_Type::Type_non)
     , _trs(mat4(1.f))
     , _rot(mat4(1.f))
     , _scale(mat4(1.f))
     , _FT(mat4(1.f))
+	, _position(vec3(0.f))
 {
     glGenVertexArrays(6, VAOs);
     glGenBuffers(6, VBOs);
@@ -32,13 +32,13 @@ Model::Model()
 }
 
 Model::Model(Model_Type type)
-    : _face_on_1(10)
-    , _face_on_2(10)
-    , _type(type)
+    :
+     _type(type)
     , _trs(mat4(1.f))
     , _rot(mat4(1.f))
     , _scale(mat4(1.f))
     , _FT(mat4(1.f))
+	, _position(vec3(0.f))
 {
     glGenVertexArrays(6, VAOs);
     glGenBuffers(6, VBOs);
@@ -50,63 +50,22 @@ Model::~Model() {}
 
 Cube::Cube()
     : Model(Model_Type::Type_cube)
-    , _Top_mat(mat4(1.f))
-    , _Front_mat(mat4(1.f))
-    , _Side_mat(mat4(1.f))
-    , _Back_mat(mat4(1.f))
     , _angle(0.f)
+	, _xoffset(0.5f)
+	, _yoffset(0.5f)
+	, _zoffset(0.5f)
 {
-    glGenVertexArrays(6, VAOs);
-    glGenBuffers(6, VBOs);
-    glGenBuffers(6, EBOs);
+	// 큐브 모델 초기화
+	read_obj_file("cube.obj", *this);
+	_face_indices.resize(6);
+	glGenVertexArrays(6, VAOs);
+	glGenBuffers(6, VBOs);
+	glGenBuffers(6, EBOs);
     _face_indices.resize(6);
   
 }
 
-void Cube::init_matrix()
-{
-    _Top_mat = mat4(1.f);
-    _Front_mat = mat4(1.f);
-    _Side_mat = mat4(1.f);
-    _Back_mat = mat4(1.f);
-}
 
-void Cube::top_revolving()
-{
-    _angle += 1.f;
-    if (_angle >= 360.f)
-        _angle = 0.f;
-
-    mat4 trs = glm::translate(mat4(1.f), vec3(0.f, -0.5f, 0.f));
-    mat4 rot = glm::rotate(mat4(1.f), radians(_angle), vec3(1.f, 0.f, 0.f));
-    mat4 trs2 = glm::translate(mat4(1.f), vec3(0.f, 0.5f, 0.f));
-
-    _Top_mat = trs2 * rot * trs;
-}
-
-void Cube::front_opening()
-{
-    if (_angle <= 90.f)
-        _angle += 1.f;
-
-    mat4 trs = glm::translate(mat4(1.f), vec3(0.f, 0.5f, -0.5f));
-    mat4 rot = glm::rotate(mat4(1.f), radians(_angle), vec3(1.f, 0.f, 0.f));
-    mat4 trs2 = glm::translate(mat4(1.f), vec3(0.f, -0.5f, 0.5f));
-
-    _Front_mat = trs2 * rot * trs;
-}
-
-void Cube::front_closing()
-{
-    if (_angle >= 0.f)
-        _angle -= 1.f;
-
-    mat4 trs = glm::translate(mat4(1.f), vec3(0.f, 0.5f, -0.5f));
-    mat4 rot = glm::rotate(mat4(1.f), radians(_angle), vec3(1.f, 0.f, 0.f));
-    mat4 trs2 = glm::translate(mat4(1.f), vec3(0.f, -0.5f, 0.5f));
-
-    _Front_mat = trs2 * rot * trs;
-}
 
 void Cube::model_init_buffer()
 {
@@ -175,8 +134,7 @@ void Cube::model_init_buffer()
 void Cube::Draw(GLuint shaderProgramID)
 {
     glUseProgram(shaderProgramID);
-
-
+    model_init_buffer();
     for (int i = 0; i < _face_indices.size(); ++i) 
     {
         glBindVertexArray(VAOs[i]);
@@ -216,7 +174,6 @@ void Pyramid::model_init_buffer() {
         else
             ++j;
     }
-
     // 각 면의 정점 데이터를 _vertices에 저장
     for (const auto& vertex : vertices) {
         _vertices.push_back(vertex.x);
@@ -229,8 +186,6 @@ void Pyramid::model_init_buffer() {
         _vertices.push_back(vertex.g);
         _vertices.push_back(vertex.b);
     }
-
-
     // 각 면에 대해 별도의 VAO, VBO, EBO를 바인딩하고 데이터를 버퍼에 올림
     for (i = 0; i < _face_indices.size(); ++i)
     {

@@ -12,6 +12,7 @@
 #include "TimeManager.h"
 #include "CameraManager.h"
 #include "MouseManager.h"
+#include "Rifle.h"
 
 
 void setMousePosition(int x, int y) {
@@ -19,61 +20,18 @@ void setMousePosition(int x, int y) {
     SetCursorPos(x, y);
 }
 
-KeyManager keyManager;
-SceneManager sceneManager;
-TimeManager timeManager;
-CameraManager cameraManager;
-MouseManager mouseManager;
+
 
 int window_x = 960;
 int window_y = 1080;
 
+void Idle();
+void KeyboardDown(unsigned char key, int x, int y);
+void KeyboardUp(unsigned char key, int x, int y);
+void MouseButton(int button, int state, int x, int y);
+void MouseMove(int x, int y);
 
-void Idle()
-{
-    double elapsedTime = timeManager.GetElapsedTime();
 
-    cameraManager.update(keyManager, elapsedTime);
-
-    glutPostRedisplay();
-}
-
-void KeyboardDown(unsigned char key, int x, int y) {
-    keyManager.KeyDown(key);
-}
-
-void KeyboardUp(unsigned char key, int x, int y) {
-    keyManager.KeyUp(key);
-}
-
-void MouseButton(int button, int state, int x, int y) {
-    if (state == GLUT_DOWN) {
-        mouseManager.MouseDown(button);
-    }
-    else if (state == GLUT_UP) {
-        mouseManager.MouseUp(button);
-    }
-}
-
-void MouseMove(int x, int y) {
-    float xpos = static_cast<float>(x);
-    float ypos = static_cast<float>(y);
-
-    mouseManager.MouseMove(xpos, ypos, window_x, window_y);
-    cameraManager.processMouseMovement(mouseManager.GetXOffset(), mouseManager.GetYOffset());
-
-    glutPostRedisplay();
-}
-
-enum Rotate_Type
-{
-	Rotate_none,
-	Rotate_x_p,
-	Rotate_x_m,
-	Rotate_y_p,
-	Rotate_y_m,
-	Rotate_end,
-};
 
 enum TTM
 {
@@ -82,13 +40,9 @@ enum TTM
     Mode_Off,
 };
 
-Rotate_Type rtype;
 GLvoid drawScene(GLvoid);
 GLvoid Reshape(int w, int h);
-GLvoid Keyboard(unsigned char key, int x, int y);
 GLvoid sp_Keyboard(int key, int x, int y);
-GLvoid Mouse(int button, int state, int x, int y);
-int check_quad(float xpos, float ypos);
 void UserTimerFunc(int value);
 
 
@@ -178,7 +132,8 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     glutPassiveMotionFunc(MouseMove);
     glutMotionFunc(MouseMove);
 	make_shaderProgram();
-    timeManager.Initialize();
+    TimeManager::getInstance().Initialize();
+	
     glutSetCursor(GLUT_CURSOR_NONE);
 
     // 프로그램 시작 시 마우스 위치를 윈도우 창의 정중앙으로 설정
@@ -187,7 +142,7 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
     plight_cube = new Cube();
-    read_obj_file("Cube.obj", *plight_cube);
+	SceneManager::getInstance().AddObject(new Rifle());
 
 	InitBuffer();
 	glLineWidth(2);
@@ -195,6 +150,9 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 	
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_COLOR_MATERIAL);
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	glFrontFace(GL_CCW);
 	//glEnable(GL_POLYGON_SMOOTH);
 	//glEnable(GL_LINE_SMOOTH);
 
@@ -231,15 +189,10 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
 
 	glUseProgram(shaderProgramID);
 
-    mat4 viewT = cameraManager.getViewMatrix();
-    mat4 projectionT = cameraManager.getProjectionMatrix();
+    mat4 viewT = CameraManager::getInstance().getViewMatrix();
+    mat4 projectionT = CameraManager::getInstance().getProjectionMatrix();
     mat4 model = mat4(1.f);
-
-  
     projectionT = glm::translate(projectionT, vec3(0.f, 0.f, -2.f));
-
-  
-
 
     // 행렬 위치 받아놓음
 	GLuint modelLoc = glGetUniformLocation(shaderProgramID, "model");
@@ -267,17 +220,16 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
     unsigned int viewPosLocation = glGetUniformLocation(shaderProgramID, "viewPos"); //--- viewPos 값 전달: 카메라 위치
     glUniform3f(viewPosLocation, g_camerapos.x, g_camerapos.y, g_camerapos.z);
 
-    plight_cube->_trs = glm::translate(mat4(1.f), vec3(0.f, 0.0f, cube_zoffset));
+    plight_cube->_trs = glm::translate(mat4(1.f), vec3(0.f, 0.0f, 0.f));
     plight_cube->_rot = glm::rotate(mat4(1.f), radians(light_theta), vec3(0.f, 1.f, 0.f));
-    plight_cube->_scale = glm::scale(mat4(1.f), vec3(0.2f, 0.2f, 0.2f));
+    plight_cube->_scale = glm::scale(mat4(1.f), vec3(3.f, 0.1f, 15.f));
     plight_cube->_FT = plight_cube->_rot * plight_cube->_trs * plight_cube->_scale * model;
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(plight_cube->_FT));
-    plight_cube->Draw(shaderProgramID);
+    //plight_cube->Draw(shaderProgramID);
+
+	SceneManager::getInstance().draw(shaderProgramID);
 
 
- 
-  
- 
     glutSwapBuffers(); //--- 화면에 출력하기
 }
 
@@ -428,6 +380,43 @@ void UserTimerFunc(int value)
 		glutTimerFunc(10, UserTimerFunc, 1);
 }
 
+void Idle()
+{
+	double elapsedTime = TimeManager::getInstance().GetElapsedTime();
+
+	CameraManager::getInstance().update(KeyManager::getInstance(), elapsedTime);
+	SceneManager::getInstance().update(elapsedTime);
+	glutPostRedisplay();
+}
+
+void KeyboardDown(unsigned char key, int x, int y) {
+	KeyManager::getInstance().KeyDown(key);
+}
+
+void KeyboardUp(unsigned char key, int x, int y) {
+	KeyManager::getInstance().KeyUp(key);
+}
+
+void MouseButton(int button, int state, int x, int y) {
+	if (state == GLUT_DOWN) {
+		MouseManager::getInstance().MouseDown(button);
+	}
+	else if (state == GLUT_UP) {
+		MouseManager::getInstance().MouseUp(button);
+	}
+}
+
+void MouseMove(int x, int y) {
+	float xpos = static_cast<float>(x);
+	float ypos = static_cast<float>(y);
+
+	MouseManager::getInstance().MouseMove(xpos, ypos, window_x, window_y);
+	CameraManager::getInstance().processMouseMovement(
+		MouseManager::getInstance().GetXOffset(),
+		MouseManager::getInstance().GetYOffset());
+
+	glutPostRedisplay();
+}
 
 
 

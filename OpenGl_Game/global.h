@@ -12,9 +12,6 @@
 float Random_0_to_1f();
 
 using std::vector;
-
-
-
 using glm::mat4;
 using glm::radians;
 using glm::vec2;

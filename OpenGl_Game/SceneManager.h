@@ -1,31 +1,23 @@
 // SceneManager.h
 #pragma once
 #include <vector>
-#include "GLU_Object.h"
+class Object;
+
+using GLuint = unsigned int;
 
 class SceneManager {
 public:
-    void AddObject(GLU_Object* object);
-    void RemoveObject(GLU_Object* object);
+    static SceneManager& getInstance() {
+        static SceneManager instance;
+        return instance;
+    }
+    void AddObject(Object* object);
+    void RemoveObject(Object* object);
     void DrawObjects(GLuint shaderProgramID);
+	void update(float deltaTime);
+	void draw(GLuint shaderProgramID);
 
 private:
-    std::vector<GLU_Object*> objects;
+    std::vector<Object*> objects;
 };
 
-// SceneManager.cpp
-#include "SceneManager.h"
-
-void SceneManager::AddObject(GLU_Object* object) {
-    objects.push_back(object);
-}
-
-void SceneManager::RemoveObject(GLU_Object* object) {
-    objects.erase(std::remove(objects.begin(), objects.end(), object), objects.end());
-}
-
-void SceneManager::DrawObjects(GLuint shaderProgramID) {
-    for (auto& object : objects) {
-        object->draw(GLU_FILL);
-    }
-}

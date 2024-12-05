@@ -13,49 +13,106 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\GLU">
-      <UniqueIdentifier>{e6d6fb59-3580-4f8c-8cd8-1d71a0a68e87}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Model">
-      <UniqueIdentifier>{351d64ad-4b41-4e61-a75a-a446ac932dfc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\Shader">
       <UniqueIdentifier>{8a545a3b-3f4d-45ef-af54-5849b1fae262}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\Polygon">
       <UniqueIdentifier>{f0ab9cb0-791e-4433-8d81-45530fbbc4b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\02. Component">
+      <UniqueIdentifier>{57b41722-fb6f-470a-9007-bdbaa8391242}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager">
+      <UniqueIdentifier>{53dfc93b-7071-42bb-918d-0e840a91420c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\TimeManager">
+      <UniqueIdentifier>{184c4860-da52-49c7-8a65-ee6950c2cb73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\SceneManger">
+      <UniqueIdentifier>{6ca498ce-f294-4682-82d1-12973adbdd70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\KeyManager">
+      <UniqueIdentifier>{7ba64fc2-4dec-42d2-a5f1-9f0892862d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\MouseManager">
+      <UniqueIdentifier>{c700b341-dcf3-4698-8bfe-f596812d6c25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\CameraManager">
+      <UniqueIdentifier>{29542532-77f7-4974-9c4d-547ab097d3b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model">
+      <UniqueIdentifier>{351d64ad-4b41-4e61-a75a-a446ac932dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object">
+      <UniqueIdentifier>{1156c79b-76f9-410d-8a7f-36aec63c43cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Monster">
+      <UniqueIdentifier>{f063d608-58b4-4455-b605-648b9017a4fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Gun">
+      <UniqueIdentifier>{83993923-1e0e-4ac8-9713-bfbfbb62af68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Gun\1. Rifle">
+      <UniqueIdentifier>{87f24a35-62b2-40c5-83e1-d27b9799793c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Gun\2. Shotgun">
+      <UniqueIdentifier>{75499ee2-10c9-449e-b1b0-a853b660d574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Gun\3. RPG">
+      <UniqueIdentifier>{52cdcc5c-e8c0-4d70-9f9f-6855be5a50bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Player">
+      <UniqueIdentifier>{25ee3e9e-27ca-4f29-b39f-e8cd45835e73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\GLU">
+      <UniqueIdentifier>{e6d6fb59-3580-4f8c-8cd8-1d71a0a68e87}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CameraManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="component_18.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="global.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="KeyManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeManager.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Model.h">
-      <Filter>소스 파일\Model</Filter>
+      <Filter>소스 파일\03. Model</Filter>
     </ClInclude>
     <ClInclude Include="GLU_Object.h">
-      <Filter>소스 파일\GLU</Filter>
+      <Filter>소스 파일\03. Model\GLU</Filter>
     </ClInclude>
     <ClInclude Include="Polygon_18.h">
       <Filter>소스 파일\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>소스 파일\03. Model\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>소스 파일\03. Model\Object\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Gun.h">
+      <Filter>소스 파일\03. Model\Object\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\03. Model\Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>소스 파일\01. Manager\CameraManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseManager.h">
+      <Filter>소스 파일\01. Manager\MouseManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>소스 파일\01. Manager\SceneManger</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>소스 파일\01. Manager\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>소스 파일\01. Manager\KeyManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Rifle.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -63,13 +120,43 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Model.cpp">
-      <Filter>소스 파일\Model</Filter>
+      <Filter>소스 파일\03. Model</Filter>
     </ClCompile>
     <ClCompile Include="GLU_Object.cpp">
-      <Filter>소스 파일\GLU</Filter>
+      <Filter>소스 파일\03. Model\GLU</Filter>
     </ClCompile>
     <ClCompile Include="Polygon_18.cpp">
       <Filter>소스 파일\Polygon</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>소스 파일\03. Model\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>소스 파일\03. Model\Object\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Gun.cpp">
+      <Filter>소스 파일\03. Model\Object\Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\03. Model\Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>소스 파일\01. Manager\CameraManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseManager.cpp">
+      <Filter>소스 파일\01. Manager\MouseManager</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyManager.cpp">
+      <Filter>소스 파일\01. Manager\KeyManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>소스 파일\01. Manager\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>소스 파일\01. Manager\SceneManger</Filter>
+    </ClCompile>
+    <ClCompile Include="Rifle.cpp">
+      <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -50,14 +50,14 @@ public:
     vector<vec3> normals;
     vector<float> _vertices;
     vector<unsigned int> _indices;
-    unsigned int _face_on_1;
-    unsigned int _face_on_2;
     Model_Type _type;
     mat4 _trs;
     mat4 _rot;
     mat4 _scale;
     mat4 _FT;
     GLuint VAOs[6], VBOs[6], EBOs[6];
+    
+	vec3 _position;
 
 public:
     Model();
@@ -84,20 +84,15 @@ public:
     Cube();
 
 public:
-    void init_matrix();
-    void top_revolving();
-    void front_opening();
-    void front_closing();
+
     virtual void model_init_buffer () override;
     void Draw(GLuint shaderProgramID);
 
 public:
     vector<vector<unsigned int>> _face_indices;
-   
-    mat4 _Top_mat;
-    mat4 _Front_mat;
-    mat4 _Side_mat;
-    mat4 _Back_mat;
+    GLfloat _xoffset;
+	GLfloat _yoffset;
+	GLfloat _zoffset;
     float _angle;
 };
 

@@ -5,59 +5,21 @@
 
 class MouseManager {
 public:
-    MouseManager() : lastX(0), lastY(0), firstMouse(true) {}
-
-    void MouseDown(int button) {
-        mouseStates[button] = true;
+    static MouseManager& getInstance() {
+        static MouseManager instance;
+        return instance;
     }
+    MouseManager();
 
-    void MouseUp(int button) {
-        mouseStates[button] = false;
-    }
+    void MouseDown(int button);
+    void MouseUp(int button);
+    bool IsButtonPressed(int button) const;
+    void MouseMove(float xpos, float ypos, int windowWidth, int windowHeight);
 
-    bool IsButtonPressed(int button) const {
-        auto it = mouseStates.find(button);
-        if (it != mouseStates.end()) {
-            return it->second;
-        }
-        return false;
-    }
-
-    void MouseMove(float xpos, float ypos, int windowWidth, int windowHeight) {
-        if (firstMouse) {
-            lastX = xpos;
-            lastY = ypos;
-            firstMouse = false;
-        }
-
-        xoffset = xpos - lastX;
-        yoffset = lastY - ypos; // y-coordinates are inverted
-        lastX = xpos;
-        lastY = ypos;
-
-        // Convert to OpenGL coordinates
-        xpos = (2.0f * xpos) / windowWidth - 1.0f;
-        ypos = 1.0f - (2.0f * ypos) / windowHeight;
-
-        currentX = xpos;
-        currentY = ypos;
-    }
-
-    float GetXOffset() const {
-        return xoffset;
-    }
-
-    float GetYOffset() const {
-        return yoffset;
-    }
-
-    float GetCurrentX() const {
-        return currentX;
-    }
-
-    float GetCurrentY() const {
-        return currentY;
-    }
+    float GetXOffset() const;
+    float GetYOffset() const;
+    float GetCurrentX() const;
+    float GetCurrentY() const;
 
 private:
     std::unordered_map<int, bool> mouseStates;
@@ -68,3 +30,4 @@ private:
 };
 
 #endif // MOUSEMANAGER_H
+

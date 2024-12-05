@@ -9,7 +9,6 @@ GLU_Object::GLU_Object()
     , _scale(glm::mat4(1.0f))
     , _FT(glm::mat4(1.0f))
     , _qobj(gluNewQuadric())
-    , _circle(new Circle(0.5, 32, shaderProgramID))
     , _center(0.0f, 0.0f, 0.0f, 1.0f)
 {
 

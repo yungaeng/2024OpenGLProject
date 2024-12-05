@@ -16,7 +16,6 @@ public:
     ~GLU_Object();
 
    
-    Circle* getCircle() { return _circle; }
 
     void setTranslation(const glm::vec3& translation);
     mat4 getTranslation() { return _trs; }
@@ -36,7 +35,6 @@ public:
 
 private:
     GLUquadricObj* _qobj;
-    Circle* _circle;
     glm::mat4 _trs;
     glm::mat4 _rot;
     glm::mat4 _scale;
