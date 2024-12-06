@@ -3,6 +3,12 @@
 #include "SceneManager.h"
 #include "Object.h"
 #include "global.h"
+#include "Player.h"
+
+void SceneManager::ResistPlayer(Player* player)
+{
+	_player = player;
+}
 
 void SceneManager::AddObject(Object* object) {
     objects.push_back(object);

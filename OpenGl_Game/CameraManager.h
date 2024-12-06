@@ -37,6 +37,12 @@ public:
 	glm::vec3 getPosition() {
 		return position;
 	};
+    glm::vec3 getFrontVector() const {
+        return n;
+    }
+    glm::vec3 getUpVector() const {
+        return v;
+    }
 
 private:
     glm::vec3 position;

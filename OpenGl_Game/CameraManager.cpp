@@ -45,12 +45,6 @@ void CameraManager::update(KeyManager& keyManager, float deltaTime) {
     if (keyManager.IsKeyPressed('d')) {
         moveRight(deltaTime);
     }
-    if (keyManager.IsKeyPressed('q')) {
-        rotateLeft(deltaTime);
-    }
-    if (keyManager.IsKeyPressed('e')) {
-        rotateRight(deltaTime);
-    }
     if (keyManager.IsKeyPressed('p')) {
         setPerspective(true);
     }
@@ -67,10 +61,10 @@ void CameraManager::processMouseMovement(float xoffset, float yoffset) {
     pitch += yoffset;
 
     // 제한 각도 설정
-    if (pitch > 10.0f)
-        pitch = 10.0f;
-    if (pitch < -10.0f)
-        pitch = -10.0f;
+    if (pitch > 20.0f)
+        pitch = 20.0f;
+    if (pitch < -20.0f)
+        pitch = -20.0f;
 
     glm::vec3 direction;
     direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
@@ -78,6 +72,10 @@ void CameraManager::processMouseMovement(float xoffset, float yoffset) {
     direction.z = cos(glm::radians(pitch)) * sin(glm::radians(yaw));
     direction = glm::normalize(direction);
 
+	// up vector 계산
+	u = glm::normalize(glm::cross(direction, glm::vec3(0.0f, 1.0f, 0.0f)));
+	v = glm::normalize(glm::cross(u, direction));
+	n = direction;
     target = position + direction;
 }
 

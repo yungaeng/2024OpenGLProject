@@ -9,6 +9,7 @@ enum gun_part {
 	GUN_MAGAZINE,
 	GUN_SCOPE
 };
+class Player;
 
 class Gun : public Object {
 public:
@@ -23,6 +24,7 @@ public:
 public:
 	// gun stats
 	vec3 _target;
+	std::unique_ptr<Player> _owner;
 	unsigned int _damage;
 	float _recoil;
 	float _accuracy;

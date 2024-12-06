@@ -2,6 +2,7 @@
 #pragma once
 #include <vector>
 class Object;
+class Player;
 
 using GLuint = unsigned int;
 
@@ -11,6 +12,7 @@ public:
         static SceneManager instance;
         return instance;
     }
+	void ResistPlayer(Player* player);
     void AddObject(Object* object);
     void RemoveObject(Object* object);
     void DrawObjects(GLuint shaderProgramID);
@@ -19,5 +21,6 @@ public:
 
 private:
     std::vector<Object*> objects;
+	Player* _player;
 };
 

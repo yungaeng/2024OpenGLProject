@@ -2,6 +2,7 @@
 #include "Gun.h"
 #include "Model.h"
 #include "CameraManager.h"
+#include "Player.h"
 
 Gun::Gun() 
 	: _target(CameraManager::getInstance().getTarget())

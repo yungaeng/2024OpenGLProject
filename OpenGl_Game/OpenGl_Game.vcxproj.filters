@@ -67,6 +67,9 @@
     <Filter Include="소스 파일\03. Model\GLU">
       <UniqueIdentifier>{e6d6fb59-3580-4f8c-8cd8-1d71a0a68e87}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Monster\Robot">
+      <UniqueIdentifier>{6b5a49bc-5f79-4697-af7c-8b48305fa08a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component_18.h">
@@ -112,7 +115,10 @@
       <Filter>소스 파일\01. Manager\KeyManager</Filter>
     </ClInclude>
     <ClInclude Include="Rifle.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\03. Model\Object\Gun\1. Rifle</Filter>
+    </ClInclude>
+    <ClInclude Include="Robot.h">
+      <Filter>소스 파일\03. Model\Object\Monster\Robot</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -156,7 +162,10 @@
       <Filter>소스 파일\01. Manager\SceneManger</Filter>
     </ClCompile>
     <ClCompile Include="Rifle.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\03. Model\Object\Gun\1. Rifle</Filter>
+    </ClCompile>
+    <ClCompile Include="Robot.cpp">
+      <Filter>소스 파일\03. Model\Object\Monster\Robot</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

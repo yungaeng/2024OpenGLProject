@@ -1,5 +1,6 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <windows.h>
+#include <algorithm>
 #include "global.h"
 #include "Polygon_18.h"
 #include "Line_18.h"
@@ -13,6 +14,8 @@
 #include "CameraManager.h"
 #include "MouseManager.h"
 #include "Rifle.h"
+#include "Player.h"
+#include "Robot.h"
 
 
 void setMousePosition(int x, int y) {
@@ -43,9 +46,8 @@ enum TTM
 GLvoid drawScene(GLvoid);
 GLvoid Reshape(int w, int h);
 GLvoid sp_Keyboard(int key, int x, int y);
+
 void UserTimerFunc(int value);
-
-
 void make_shaderProgram();
 void InitBuffer();
 void make_vertexShaders();
@@ -60,14 +62,12 @@ GLchar* vertexSource, * fragmentSource; //--- 소스코드 저장 변수
 
 bool on_timer = false;
 bool on_light = true;
+bool firstMouse = true;
 
 TTM light_rot = Mode_Default;
+
 float light_theta = 0.f;
-
 float cube_zoffset = 3.f;
-
-
-
 
 vec3 g_camerapos = vec3(0.f, 0.f, 0.f);
 TTM cam_rot = Mode_Default;
@@ -135,6 +135,8 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     TimeManager::getInstance().Initialize();
 	
     glutSetCursor(GLUT_CURSOR_NONE);
+	// 화면 밖으로 나가지 않도록
+	
 
     // 프로그램 시작 시 마우스 위치를 윈도우 창의 정중앙으로 설정
     setMousePosition(window_x / 2 + 300, window_y / 2);
@@ -142,8 +144,11 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
     plight_cube = new Cube();
-	SceneManager::getInstance().AddObject(new Rifle());
-
+	Player* player = new Player();
+	player->setGun(new Rifle());
+	SceneManager::getInstance().ResistPlayer(player);
+	SceneManager::getInstance().AddObject(player->getGun());
+	SceneManager::getInstance().AddObject(new Robot);
 	InitBuffer();
 	glLineWidth(2);
 	glPointSize(2);
@@ -192,7 +197,7 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
     mat4 viewT = CameraManager::getInstance().getViewMatrix();
     mat4 projectionT = CameraManager::getInstance().getProjectionMatrix();
     mat4 model = mat4(1.f);
-    projectionT = glm::translate(projectionT, vec3(0.f, 0.f, -2.f));
+    //projectionT = glm::translate(projectionT, vec3(0.f, 0.f, -2.f));
 
     // 행렬 위치 받아놓음
 	GLuint modelLoc = glGetUniformLocation(shaderProgramID, "model");
@@ -225,12 +230,12 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
     plight_cube->_scale = glm::scale(mat4(1.f), vec3(3.f, 0.1f, 15.f));
     plight_cube->_FT = plight_cube->_rot * plight_cube->_trs * plight_cube->_scale * model;
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(plight_cube->_FT));
-    //plight_cube->Draw(shaderProgramID);
+    plight_cube->Draw(shaderProgramID);
 
 	SceneManager::getInstance().draw(shaderProgramID);
 
-
     glutSwapBuffers(); //--- 화면에 출력하기
+
 }
 
 GLvoid Reshape(int w, int h) //--- 콜백 함수: 다시 그리기 콜백 함수 {
@@ -383,7 +388,10 @@ void UserTimerFunc(int value)
 void Idle()
 {
 	double elapsedTime = TimeManager::getInstance().GetElapsedTime();
-
+	if(KeyManager::getInstance().IsKeyPressed('q'))
+	{
+		glutLeaveMainLoop();
+	}
 	CameraManager::getInstance().update(KeyManager::getInstance(), elapsedTime);
 	SceneManager::getInstance().update(elapsedTime);
 	glutPostRedisplay();
@@ -407,13 +415,24 @@ void MouseButton(int button, int state, int x, int y) {
 }
 
 void MouseMove(int x, int y) {
-	float xpos = static_cast<float>(x);
-	float ypos = static_cast<float>(y);
+	int centerX = window_x / 2;
+	int centerY = window_y / 2;
 
-	MouseManager::getInstance().MouseMove(xpos, ypos, window_x, window_y);
-	CameraManager::getInstance().processMouseMovement(
-		MouseManager::getInstance().GetXOffset(),
-		MouseManager::getInstance().GetYOffset());
+	if (firstMouse) {
+		firstMouse = false;
+		// 처음에는 이동량을 계산하지 않음
+	}
+	else {
+		// 마우스 이동량 계산
+		float xoffset = x - centerX;
+		float yoffset = centerY - y; // y 좌표는 상하 반전
+
+		// 이동량을 사용하여 카메라나 객체 업데이트
+		CameraManager::getInstance().processMouseMovement(xoffset, yoffset);
+	}
+
+	// 마우스 커서를 윈도우 중앙으로 이동
+	glutWarpPointer(centerX, centerY);
 
 	glutPostRedisplay();
 }

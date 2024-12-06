@@ -19,6 +19,10 @@ bool MouseManager::IsButtonPressed(int button) const {
 }
 
 void MouseManager::MouseMove(float xpos, float ypos, int windowWidth, int windowHeight) {
+    // 마우스 위치를 윈도우 크기 내로 제한
+    
+  
+
     if (firstMouse) {
         lastX = xpos;
         lastY = ypos;

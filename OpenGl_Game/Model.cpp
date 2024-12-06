@@ -65,6 +65,24 @@ Cube::Cube()
   
 }
 
+Cube::Cube(string name)
+    : Model(Model_Type::Type_cube)
+    , _angle(0.f)
+    , _xoffset(0.5f)
+    , _yoffset(0.5f)
+    , _zoffset(0.5f)
+	, _name(name)
+{
+    // 큐브 모델 초기화
+    read_obj_file("cube.obj", *this);
+    _face_indices.resize(6);
+    glGenVertexArrays(6, VAOs);
+    glGenBuffers(6, VBOs);
+    glGenBuffers(6, EBOs);
+    _face_indices.resize(6);
+
+}
+
 
 
 void Cube::model_init_buffer()

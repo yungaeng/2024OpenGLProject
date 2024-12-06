@@ -17,8 +17,7 @@ using glm::radians;
 using glm::vec2;
 using glm::vec3;
 using glm::vec4;
-
-class string;
+using std::string;
 
 #define MAX_LINE_LENGTH 128
 
@@ -82,6 +81,7 @@ public:
 
 public:
     Cube();
+    Cube(string name);
 
 public:
 
@@ -94,6 +94,7 @@ public:
 	GLfloat _yoffset;
 	GLfloat _zoffset;
     float _angle;
+    string _name;
 };
 
 // Pyramid 클래스 추가

@@ -15,5 +15,4 @@ public:
 
 private:
     void reload();
-    void handleRecoil();
 };
