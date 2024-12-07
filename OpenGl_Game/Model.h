@@ -19,6 +19,8 @@ using glm::vec3;
 using glm::vec4;
 using std::string;
 
+class Collider;
+
 #define MAX_LINE_LENGTH 128
 
 class Vertex {
@@ -55,13 +57,18 @@ public:
     mat4 _scale;
     mat4 _FT;
     GLuint VAOs[6], VBOs[6], EBOs[6];
-    
+    Collider* collider;  // Collider 추가
 	vec3 _position;
 
 public:
     Model();
     Model(Model_Type type);
     virtual ~Model();
+
+
+    virtual void initCollider() {};
+    // Collider 업데이트 함수 추가
+    virtual void updateCollider() {};
 
     virtual void model_init_buffer() = 0;
 };
@@ -87,6 +94,11 @@ public:
 
     virtual void model_init_buffer () override;
     void Draw(GLuint shaderProgramID);
+    // AABB 갱신 함수 선언
+    void updateAABB();
+    virtual void initCollider();
+    virtual void updateCollider();
+
 
 public:
     vector<vector<unsigned int>> _face_indices;
@@ -95,6 +107,9 @@ public:
 	GLfloat _zoffset;
     float _angle;
     string _name;
+    // AABB 바운딩 볼륨 멤버 변수 추가
+    vec3 _minAABB;
+    vec3 _maxAABB;
 };
 
 // Pyramid 클래스 추가
@@ -105,6 +120,8 @@ public:
 public:
     virtual void model_init_buffer() override;
     void Draw(GLuint shaderProgramID);
+    
+
 public:
     vector<vector<unsigned int>> _face_indices;
 };

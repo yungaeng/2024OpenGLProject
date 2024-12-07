@@ -131,6 +131,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="ColMgr.h" />
     <ClInclude Include="component_18.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="GLU_Object.h" />
@@ -149,6 +151,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="ColMgr.cpp" />
     <ClCompile Include="GLU_Object.cpp" />
     <ClCompile Include="Gun.cpp" />
     <ClCompile Include="KeyManager.cpp" />

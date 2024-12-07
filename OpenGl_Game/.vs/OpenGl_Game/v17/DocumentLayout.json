@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:ColMgr.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,24 +23,52 @@
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Robot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Gun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Gun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:ColMgr.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Gun.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Gun.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Gun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Gun.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Rifle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:KeyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -45,14 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:CameraManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:KeyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Model.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -75,20 +107,12 @@
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Rifle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Model.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\vertex.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -101,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:MouseManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:global.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -118,13 +138,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.h",
               "RelativeDocumentMoniker": "SceneManager.h",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.h",
               "RelativeToolTip": "SceneManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAIAwwBUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-04T10:36:39.751Z",
               "IsPinned": true,
@@ -132,13 +152,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "SceneManager.cpp",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.cpp",
               "RelativeDocumentMoniker": "SceneManager.cpp",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\SceneManager.cpp",
               "RelativeToolTip": "SceneManager.cpp",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowCcAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T10:51:11.289Z",
               "IsPinned": true,
@@ -146,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "Gun.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Gun.h",
               "RelativeDocumentMoniker": "Gun.h",
@@ -160,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "Gun.cpp",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Gun.cpp",
               "RelativeDocumentMoniker": "Gun.cpp",
@@ -174,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "Rifle.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Rifle.h",
               "RelativeDocumentMoniker": "Rifle.h",
@@ -183,20 +203,47 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-04T12:53:26.392Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Rifle.cpp",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Rifle.cpp",
               "RelativeDocumentMoniker": "Rifle.cpp",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Rifle.cpp",
               "RelativeToolTip": "Rifle.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-04T12:54:00.165Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ColMgr.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.h",
+              "RelativeDocumentMoniker": "ColMgr.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.h",
+              "RelativeToolTip": "ColMgr.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-07T01:41:41.801Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ColMgr.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.cpp",
+              "RelativeDocumentMoniker": "ColMgr.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\ColMgr.cpp",
+              "RelativeToolTip": "ColMgr.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-07T01:44:22.113Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -206,26 +253,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Object.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.h",
+              "RelativeDocumentMoniker": "Object.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.h",
+              "RelativeToolTip": "Object.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-07T01:21:44.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Model.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp",
+              "RelativeDocumentMoniker": "Model.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp",
+              "RelativeToolTip": "Model.cpp",
+              "ViewState": "AgIAAOYAAAAAAAAAAADgv/oAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T13:11:14.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Object.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp",
+              "RelativeDocumentMoniker": "Object.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp",
+              "RelativeToolTip": "Object.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADgvx8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T10:04:39.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Robot.cpp",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Robot.cpp",
               "RelativeDocumentMoniker": "Robot.cpp",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Robot.cpp",
               "RelativeToolTip": "Robot.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-06T14:08:17.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Robot.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Robot.h",
               "RelativeDocumentMoniker": "Robot.h",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Robot.h",
               "RelativeToolTip": "Robot.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-06T14:07:40.656Z",
               "EditorCaption": ""
@@ -233,174 +319,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAgwJsAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:35:19.108Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MouseManager.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.cpp",
-              "RelativeDocumentMoniker": "MouseManager.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.cpp",
-              "RelativeToolTip": "MouseManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:49:59.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CameraManager.h",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.h",
-              "RelativeDocumentMoniker": "CameraManager.h",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.h",
-              "RelativeToolTip": "CameraManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T10:36:36.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "vertex.glsl",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\vertex.glsl",
-              "RelativeDocumentMoniker": "vertex.glsl",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\vertex.glsl",
-              "RelativeToolTip": "vertex.glsl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-12-06T13:18:38.341Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Player.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.cpp",
-              "RelativeDocumentMoniker": "Player.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.cpp",
-              "RelativeToolTip": "Player.cpp",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAowBkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-06T09:07:54.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Model.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp",
-              "RelativeDocumentMoniker": "Model.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.cpp",
-              "RelativeToolTip": "Model.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowEQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T13:11:14.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Player.h",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.h",
-              "RelativeDocumentMoniker": "Player.h",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.h",
-              "RelativeToolTip": "Player.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-06T09:07:56.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Model.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.h",
               "RelativeDocumentMoniker": "Model.h",
               "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Model.h",
               "RelativeToolTip": "Model.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAADgvzsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-12-04T12:06:59.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TimeManager.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.cpp",
-              "RelativeDocumentMoniker": "TimeManager.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.cpp",
-              "RelativeToolTip": "TimeManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:50:43.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "KeyManager.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.cpp",
-              "RelativeDocumentMoniker": "KeyManager.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.cpp",
-              "RelativeToolTip": "KeyManager.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:50:14.905Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CameraManager.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.cpp",
-              "RelativeDocumentMoniker": "CameraManager.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.cpp",
-              "RelativeToolTip": "CameraManager.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAACoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:45:53.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "TimeManager.h",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.h",
-              "RelativeDocumentMoniker": "TimeManager.h",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.h",
-              "RelativeToolTip": "TimeManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Collider.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.h",
+              "RelativeDocumentMoniker": "Collider.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.h",
+              "RelativeToolTip": "Collider.h",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T10:36:42.38Z"
+              "WhenOpened": "2024-12-07T02:00:23.233Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MouseManager.h",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.h",
-              "RelativeDocumentMoniker": "MouseManager.h",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.h",
-              "RelativeToolTip": "MouseManager.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwA0AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T10:36:39.218Z",
+              "DocumentIndex": 10,
+              "Title": "Collider.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.cpp",
+              "RelativeDocumentMoniker": "Collider.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Collider.cpp",
+              "RelativeToolTip": "Collider.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-07T02:06:10.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "global.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h",
+              "RelativeDocumentMoniker": "global.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h",
+              "RelativeToolTip": "global.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-04T10:36:37.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "KeyManager.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.h",
               "RelativeDocumentMoniker": "KeyManager.h",
@@ -413,32 +383,139 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "global.h",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h",
-              "RelativeDocumentMoniker": "global.h",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\global.h",
-              "RelativeToolTip": "global.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T10:36:37.973Z"
+              "DocumentIndex": 17,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAgwJsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T10:35:19.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Object.cpp",
-              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp",
-              "RelativeDocumentMoniker": "Object.cpp",
-              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Object.cpp",
-              "RelativeToolTip": "Object.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "MouseManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.cpp",
+              "RelativeDocumentMoniker": "MouseManager.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.cpp",
+              "RelativeToolTip": "MouseManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:04:39.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T10:49:59.225Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
+              "Title": "CameraManager.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.h",
+              "RelativeDocumentMoniker": "CameraManager.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.h",
+              "RelativeToolTip": "CameraManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-04T10:36:36.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "vertex.glsl",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\vertex.glsl",
+              "RelativeDocumentMoniker": "vertex.glsl",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\vertex.glsl",
+              "RelativeToolTip": "vertex.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-06T13:18:38.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.cpp",
+              "RelativeDocumentMoniker": "Player.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.cpp",
+              "RelativeToolTip": "Player.cpp",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-06T09:07:54.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Player.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.h",
+              "RelativeDocumentMoniker": "Player.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Player.h",
+              "RelativeToolTip": "Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-06T09:07:56.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TimeManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.cpp",
+              "RelativeDocumentMoniker": "TimeManager.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.cpp",
+              "RelativeToolTip": "TimeManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T10:50:43.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "KeyManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.cpp",
+              "RelativeDocumentMoniker": "KeyManager.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\KeyManager.cpp",
+              "RelativeToolTip": "KeyManager.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T10:50:14.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CameraManager.cpp",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.cpp",
+              "RelativeDocumentMoniker": "CameraManager.cpp",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\CameraManager.cpp",
+              "RelativeToolTip": "CameraManager.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAACoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T10:45:53.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TimeManager.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.h",
+              "RelativeDocumentMoniker": "TimeManager.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\TimeManager.h",
+              "RelativeToolTip": "TimeManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-04T10:36:42.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MouseManager.h",
+              "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.h",
+              "RelativeDocumentMoniker": "MouseManager.h",
+              "ToolTip": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\MouseManager.h",
+              "RelativeToolTip": "MouseManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-04T10:36:39.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
               "Title": "Monster.cpp",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Monster.cpp",
               "RelativeDocumentMoniker": "Monster.cpp",
@@ -446,12 +523,11 @@
               "RelativeToolTip": "Monster.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T10:04:25.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T10:04:25.777Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "Monster.h",
               "DocumentMoniker": "C:\\Users\\Programmer\\OpenGL_Game\\OpenGl_Game\\Monster.h",
               "RelativeDocumentMoniker": "Monster.h",
@@ -459,8 +535,7 @@
               "RelativeToolTip": "Monster.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T10:04:24.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T10:04:24.105Z"
             }
           ]
         }

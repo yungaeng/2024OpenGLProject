@@ -70,6 +70,12 @@
     <Filter Include="소스 파일\03. Model\Object\Monster\Robot">
       <UniqueIdentifier>{6b5a49bc-5f79-4697-af7c-8b48305fa08a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\01. Manager\ColMgr">
+      <UniqueIdentifier>{da22632d-3901-443e-a895-b9eb1f965cbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02. Component\Collider">
+      <UniqueIdentifier>{1fe4bc14-f0ed-420d-85de-c1f94505da79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component_18.h">
@@ -120,6 +126,12 @@
     <ClInclude Include="Robot.h">
       <Filter>소스 파일\03. Model\Object\Monster\Robot</Filter>
     </ClInclude>
+    <ClInclude Include="ColMgr.h">
+      <Filter>소스 파일\01. Manager\ColMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>소스 파일\02. Component\Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -166,6 +178,12 @@
     </ClCompile>
     <ClCompile Include="Robot.cpp">
       <Filter>소스 파일\03. Model\Object\Monster\Robot</Filter>
+    </ClCompile>
+    <ClCompile Include="ColMgr.cpp">
+      <Filter>소스 파일\01. Manager\ColMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>소스 파일\02. Component\Collider</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

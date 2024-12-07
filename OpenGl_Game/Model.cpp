@@ -7,8 +7,8 @@
 #include <gl/glew.h>
 #include <gl/freeglut.h>
 #include <gl/freeglut_ext.h>
-
 #include <random>
+#include "Collider.h"
 
 float Random_0_to_1f_model() {
     static std::random_device rd;
@@ -151,14 +151,71 @@ void Cube::model_init_buffer()
 
 void Cube::Draw(GLuint shaderProgramID)
 {
+    _FT = _trs * _scale;
+
+    // Collider 업데이트
+    updateCollider();
     glUseProgram(shaderProgramID);
     model_init_buffer();
+
     for (int i = 0; i < _face_indices.size(); ++i) 
     {
         glBindVertexArray(VAOs[i]);
 
         glDrawElements(GL_TRIANGLES, _face_indices[i].size(), GL_UNSIGNED_INT, 0);
     }
+}
+
+void Cube::updateAABB()
+{
+    // 단위 큐브의 정점 좌표
+    std::vector<glm::vec3> vertices = {
+        {-0.5f, -0.5f, -0.5f},
+        { 0.5f, -0.5f, -0.5f},
+        { 0.5f,  0.5f, -0.5f},
+        {-0.5f,  0.5f, -0.5f},
+        {-0.5f, -0.5f,  0.5f},
+        { 0.5f, -0.5f,  0.5f},
+        { 0.5f,  0.5f,  0.5f},
+        {-0.5f,  0.5f,  0.5f}
+    };
+
+    // 변환된 정점 좌표 계산
+    std::vector<glm::vec3> transformedVertices;
+    for (const auto& vertex : vertices) {
+        glm::vec4 transformedVertex = _FT * glm::vec4(vertex, 1.0f);
+        transformedVertices.push_back(glm::vec3(transformedVertex));
+    }
+
+    // AABB 초기화
+    _minAABB = transformedVertices[0];
+    _maxAABB = transformedVertices[0];
+
+    // AABB 계산
+    for (const auto& vertex : transformedVertices) {
+        _minAABB = glm::min(_minAABB, vertex);
+        _maxAABB = glm::max(_maxAABB, vertex);
+    }
+}
+
+void Cube::initCollider()
+{
+    collider = new Collider();
+    collider->SetScale(vec3(1.0f));  // 기본 스케일 설정
+}
+
+void Cube::updateCollider()
+{
+    // 월드 변환 행렬을 사용하여 AABB 계산
+    vec3 position = vec3(_FT * vec4(0.f, 0.f, 0.f, 1.f));
+    vec3 scale = vec3(_scale[0][0], _scale[1][1], _scale[2][2]) * collider->GetScale();
+
+    vec3 halfScale = scale * 0.5f;
+    vec3 minAABB = position - halfScale;
+    vec3 maxAABB = position + halfScale;
+
+    collider->SetAABB(minAABB, maxAABB);
+    collider->SetFinalPos(position);
 }
 
 Pyramid::Pyramid() : Model(Type_pyramid) {
@@ -240,7 +297,8 @@ void Pyramid::Draw(GLuint shaderProgramID) {
         glDrawElements(GL_TRIANGLES, _face_indices[i].size(), GL_UNSIGNED_INT, 0);
     }
 }
-  
+
+
 
 void read_newline(std::string& str) {
     if (!str.empty() && str.back() == '\n') {

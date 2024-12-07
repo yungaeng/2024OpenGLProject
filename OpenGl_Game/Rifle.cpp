@@ -12,8 +12,7 @@ Rifle::Rifle() {
     _fireTimer = 0.1f;
 	addPart(new Cube("Barrel"));    // Barrel
 	addPart(new Cube("Body"));      // Body
-	addPart(new Cube("CrossLine"));     // Stock
-	parts[GUN_BODY]->_position = CameraManager::getInstance().getPosition();
+	addPart(new Cube("CrossLine")); // Stock
 }
 
 Rifle::~Rifle() {
@@ -38,7 +37,7 @@ void Rifle::draw(GLuint shaderProgramID) {
     vec3 cameraFront = CameraManager::getInstance().getFrontVector();
     vec3 cameraUp = CameraManager::getInstance().getUpVector();
     vec3 cameraRight = glm::cross(cameraFront, cameraUp);
-    for (auto& part : parts) {
+    for (auto& part : _parts) {
 		if (part->_name == "Body")
         {
             // 위치 변환

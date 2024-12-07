@@ -1,5 +1,36 @@
-﻿  main.cpp
+﻿  Collider.cpp
+  ColMgr.cpp
+  Gun.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\ColMgr.cpp(50,30): error C2039: 'GetCollider': 'Object'의 멤버가 아닙니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Object.h(11,7):
+      'Object' 선언을 참조하십시오.
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\ColMgr.cpp(57,32): error C2039: 'GetCollider': 'Object'의 멤버가 아닙니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Object.h(11,7):
+      'Object' 선언을 참조하십시오.
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\ColMgr.cpp(63,37): error C2039: 'GetCollider': 'Object'의 멤버가 아닙니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Object.h(11,7):
+      'Object' 선언을 참조하십시오.
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\ColMgr.cpp(64,39): error C2039: 'GetCollider': 'Object'의 멤버가 아닙니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Object.h(11,7):
+      'Object' 선언을 참조하십시오.
+  
+  main.cpp
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(86,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(150,30): error C2660: 'SceneManager::AddObject': 함수는 1개의 인수를 사용하지 않습니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.h(16,10):
+      'SceneManager::AddObject' 선언을 참조하십시오.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(150,30):
+      인수 목록 '(Gun *)'을(를) 일치시키는 동안
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(151,30): error C2660: 'SceneManager::AddObject': 함수는 1개의 인수를 사용하지 않습니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.h(16,10):
+      'SceneManager::AddObject' 선언을 참조하십시오.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(151,30):
+      인수 목록 '(Robot *)'을(를) 일치시키는 동안
+  
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,51): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,41): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
@@ -8,4 +39,112 @@ C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(395,65): warning C4244: '�
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(396,37): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(427,17): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(428,17): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  OpenGl_Game.vcxproj -> C:\Users\Programmer\OpenGL_Game\OpenGl_Game\x64\Debug\OpenGl_Game.exe
+  Model.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(2,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(165,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(297,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(301,15): error C2509: 'initCollider': 멤버 함수를 'Pyramid'에서 선언하지 않았습니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.h(116,7):
+      'Pyramid' 선언을 참조하십시오.
+  
+  Monster.cpp
+  Object.cpp
+  Player.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(18,20): error C2065: 'parts': 선언되지 않은 식별자입니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(18,13): error C2530: 'part': 참조를 초기화해야 합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(18,13): error C3531: 'part': 형식에 'auto'이(가) 포함된 기호에는 이니셜라이저가 있어야 합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(18,18): error C2143: 구문 오류: ';'이(가) ':' 앞에 없습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(18,25): error C2143: 구문 오류: ';'이(가) ')' 앞에 없습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(19,3): error C2541: 'delete': 포인터가 아닌 개체를 삭제할 수 없습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp(21,2): error C2065: 'parts': 선언되지 않은 식별자입니다.
+  Rifle.cpp
+  Robot.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(71,23): error C2065: 'parts': 선언되지 않은 식별자입니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(71,16): error C2530: 'part': 참조를 초기화해야 합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(71,16): error C3531: 'part': 형식에 'auto'이(가) 포함된 기호에는 이니셜라이저가 있어야 합니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(71,21): error C2143: 구문 오류: ';'이(가) ':' 앞에 없습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(71,28): error C2143: 구문 오류: ';'이(가) ')' 앞에 없습니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(73,94): error C2672: 'glm::value_ptr': 일치하는 오버로드된 함수가 없습니다.
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(161,24):
+      'T *glm::value_ptr(glm::qua<T,Q> &)'일 수 있습니다.
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(155,31):
+      또는       'const T *glm::value_ptr(const glm::qua<T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(149,25):
+      또는       'T *glm::value_ptr(glm::mat<4,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(143,30):
+      또는       'const T *glm::value_ptr(const glm::mat<4,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(137,24):
+      또는       'T *glm::value_ptr(glm::mat<3,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(131,30):
+      또는       'const T *glm::value_ptr(const glm::mat<3,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(125,24):
+      또는       'T *glm::value_ptr(glm::mat<4,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(119,30):
+      또는       'const T *glm::value_ptr(const glm::mat<4,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(113,24):
+      또는       'T *glm::value_ptr(glm::mat<2,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(107,30):
+      또는       'const T *glm::value_ptr(const glm::mat<2,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(101,24):
+      또는       'T *glm::value_ptr(glm::mat<3,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(95,30):
+      또는       'const T *glm::value_ptr(const glm::mat<3,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(89,24):
+      또는       'T *glm::value_ptr(glm::mat<2,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(83,30):
+      또는       'const T *glm::value_ptr(const glm::mat<2,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(77,24):
+      또는       'T *glm::value_ptr(glm::mat<4,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(71,30):
+      또는       'const T *glm::value_ptr(const glm::mat<4,4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(65,24):
+      또는       'T *glm::value_ptr(glm::mat<3,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(59,30):
+      또는       'const T *glm::value_ptr(const glm::mat<3,3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(53,24):
+      또는       'T *glm::value_ptr(glm::mat<2,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(47,30):
+      또는       'const T *glm::value_ptr(const glm::mat<2,2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(41,24):
+      또는       'T *glm::value_ptr(glm::vec<4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(35,30):
+      또는       'const T *glm::value_ptr(const glm::vec<4,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(29,24):
+      또는       'T *glm::value_ptr(glm::vec<3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(23,31):
+      또는       'const T *glm::value_ptr(const glm::vec<3,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(17,24):
+      또는       'T *glm::value_ptr(glm::vec<2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.inl(11,30):
+      또는       'const T *glm::value_ptr(const glm::vec<2,T,Q> &)'
+      C:\Users\Programmer\OpenGL_Game\Include\glm\gtc\type_ptr.hpp(65,53):
+      또는       'const genType::value_type *glm::value_ptr(const genType &)'
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp(73,9): error C2198: 'PFNGLUNIFORMMATRIX4FVPROC': 호출에 인수가 너무 적습니다.
+  SceneManager.cpp
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,11): error C2228: '.erase' 왼쪽에는 클래스/구조체/공용 구조체가 있어야 합니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,11):
+      'std::vector<Object *,std::allocator<Object *>> [32]' 형식입니다.
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,22): error C2660: 'remove': 함수는 2개의 인수를 사용하지 않습니다.
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdio.h(369,26):
+      'remove' 선언을 참조하십시오.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xmemory(2187,43):
+      '_FwdIt std::remove(_FwdIt,const _FwdIt,const _Ty &)'일 수 있습니다.
+          C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,22):
+          '_FwdIt std::remove(_FwdIt,const _FwdIt,const _Ty &)': 3개의 인수가 필요합니다. 2개가 제공되었습니다.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,22):
+      인수 목록 '()'을(를) 일치시키는 동안
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(20,72): error C2065: 'objects': 선언되지 않은 식별자입니다.
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(48,3): error C2819: 'std::vector<Object *,std::allocator<Object *>>' 형식에 오버로드된 멤버 'operator ->'가 없습니다.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(429,7):
+      'std::vector<Object *,std::allocator<Object *>>' 선언을 참조하십시오.
+      C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(48,3):
+      대신 '.'을(를) 사용하려고 했습니까?
+  
+C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp(48,11): error C2039: 'draw': 'std::vector<Object *,std::allocator<Object *>>'의 멤버가 아닙니다.
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(429,7):
+      'std::vector<Object *,std::allocator<Object *>>' 선언을 참조하십시오.
+  
+  코드를 생성하고 있습니다...

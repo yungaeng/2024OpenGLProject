@@ -4,19 +4,29 @@
 
 
 Object::Object()
+	: _objectpos(vec3(0.f))
+	, m_bAlive(true)
+	, _name("Object")
 {
 }
 
 Object::~Object()
 {
-    for (auto& part : parts) {
+    for (auto& part : _parts) {
         delete part;
     }
 }
 
 void Object::addPart(Cube* part)
 {
-    parts.push_back(part);
+    _parts.push_back(part);
+}
+
+void Object::update(float deltaTime)
+{
+    for (auto& part : _parts) {
+        part->updateCollider();
+    }
 }
 
 
