@@ -147,8 +147,8 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 	Player* player = new Player();
 	player->setGun(new Rifle());
 	SceneManager::getInstance().ResistPlayer(player);
-	SceneManager::getInstance().AddObject(player->getGun());
-	SceneManager::getInstance().AddObject(new Robot);
+	SceneManager::getInstance().AddObject(player->getGun(),GROUP_TYPE::GUN);
+	SceneManager::getInstance().AddObject(new Robot,GROUP_TYPE::MONSTER);
 	InitBuffer();
 	glLineWidth(2);
 	glPointSize(2);

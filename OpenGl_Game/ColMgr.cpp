@@ -46,84 +46,90 @@ void CollisionMgr::CollisionUpdateGroup(GROUP_TYPE _eleft, GROUP_TYPE _eright)
 	// 만약 같은 그룹을 받아온 경우, 자기 자신과의 충돌은 예외시켜야 한다.
 	for (size_t i = 0; i < vecLeft.size(); ++i)
 	{
-		// 만약 충돌체가 없는 경우
-		if (nullptr == vecLeft[i]->GetCollider())
+		for (auto& lpart : vecLeft[i]->getParts())
 		{
-			continue;	// 컨티뉴를 만나 그냥 이 반목문 과정을 끝내고 조건값 증가 후 다음 반복문
-		}
-		for (size_t j = 0; j < vecRight.size(); ++j)
-		{
-			// 만약 충돌체가 없는 경우, 만약 자기 자신과의 충돌을 검사하려는 경우
-			if (nullptr == vecRight[j]->GetCollider()
-				|| (vecLeft[i] == vecRight[j]))
+			// 만약 충돌체가 없는 경우
+			if (nullptr == lpart->getCollider())
 			{
-				continue;	// 컨티뉴를 만나 그냥 이 반목문을 끝내고 다음 반복문 증가
+				continue;	// 컨티뉴를 만나 그냥 이 반목문 과정을 끝내고 조건값 증가 후 다음 반복문
 			}
-
-			Collider* pLeftCol = vecLeft[i]->GetCollider();
-			Collider* pRightCol = vecRight[j]->GetCollider();
-
-			// 본격적인 충돌체크 - 충돌체 조합 아이디 생성
-			COLLIDER_ID ID;
-			ID.Left_id = pLeftCol->GetID();
-			ID.Right_id = pRightCol->GetID();
-			// 이렇게 완성된 4 + 4 8바이트 ID는 고유한 ID가 된다
-
-			iter = m_mapColInfo.find(ID.ID);
-
-			// 충돌 정보가 미 등록 상태인 경우 (충돌하지 않았다=false 로 설정)
-			if (m_mapColInfo.end() == iter)
+			for (size_t j = 0; j < vecRight.size(); ++j)
 			{
-				m_mapColInfo.insert(make_pair(ID.ID, false));
-				iter = m_mapColInfo.find(ID.ID);
-			}
-
-			if (IsCollision(pLeftCol, pRightCol))
-			{
-				// 현재 충돌 중이다.
-
-				if (iter->second)
+				for(auto& rpart : vecRight[j]->getParts())
 				{
-					// 이전에도 충돌하고 있었다. ( 누구랑 )
-
-					if (vecLeft[i]->IsDead() || vecRight[j]->IsDead())
+					// 만약 충돌체가 없는 경우, 만약 자기 자신과의 충돌을 검사하려는 경우
+					if (nullptr == rpart->getCollider()
+						|| (lpart == rpart))
 					{
-						// 둘 중 하나가 죽을 예정이면 충돌을 벗어난 판정으로 해줘야한다.
-						pLeftCol->OnCollisionExit(pRightCol);
-						pRightCol->OnCollisionExit(pLeftCol);
-						iter->second = false;
+						continue;	// 컨티뉴를 만나 그냥 이 반목문을 끝내고 다음 반복문 증가
 					}
-					else
-					{	// 죽을 예정이 아니라면 계속 충돌 중이다.
-						pLeftCol->OnCollision(pRightCol);
-						pRightCol->OnCollision(pLeftCol);
-					}
-				}
-				else
-				{
-					// 이전에는 충돌하지 않았지만 지금 충돌했다 ( 누구랑 ) 근데 이제 막 삭제될 참이다.
-					// 그럼 차라리 충돌 안 된 걸로 하자 
-					// 아니라면 이제 충돌에 진입한 것이다.
-					if (!vecLeft[i]->IsDead() && !vecRight[j]->IsDead())
+
+					Collider* pLeftCol = lpart->getCollider();
+					Collider* pRightCol = rpart->getCollider();
+
+					// 본격적인 충돌체크 - 충돌체 조합 아이디 생성
+					COLLIDER_ID ID;
+					ID.Left_id = pLeftCol->GetID();
+					ID.Right_id = pRightCol->GetID();
+					// 이렇게 완성된 4 + 4 8바이트 ID는 고유한 ID가 된다
+
+					iter = m_mapColInfo.find(ID.ID);
+
+					// 충돌 정보가 미 등록 상태인 경우 (충돌하지 않았다=false 로 설정)
+					if (m_mapColInfo.end() == iter)
 					{
-						pLeftCol->OnCollisionEnter(pRightCol);
-						pRightCol->OnCollisionEnter(pLeftCol);
-						iter->second = true;
+						m_mapColInfo.insert(make_pair(ID.ID, false));
+						iter = m_mapColInfo.find(ID.ID);
 					}
 
+					if (IsCollision(pLeftCol, pRightCol))
+					{
+						// 현재 충돌 중이다.
 
-				}
-			}
-			else// 충돌하고 있지 않은 경우
-			{
-				if (iter->second)
-				{
-					// 충돌하다가 이번에 충돌이 끝났다. ( 누구랑 )
-					pLeftCol->OnCollisionExit(pRightCol);
-					pRightCol->OnCollisionExit(pLeftCol);
-					iter->second = false;
-				}
+						if (iter->second)
+						{
+							// 이전에도 충돌하고 있었다. ( 누구랑 )
 
+							if (vecLeft[i]->IsDead() || vecRight[j]->IsDead())
+							{
+								// 둘 중 하나가 죽을 예정이면 충돌을 벗어난 판정으로 해줘야한다.
+								pLeftCol->OnCollisionExit(pRightCol);
+								pRightCol->OnCollisionExit(pLeftCol);
+								iter->second = false;
+							}
+							else
+							{	// 죽을 예정이 아니라면 계속 충돌 중이다.
+								pLeftCol->OnCollision(pRightCol);
+								pRightCol->OnCollision(pLeftCol);
+							}
+						}
+						else
+						{
+							// 이전에는 충돌하지 않았지만 지금 충돌했다 ( 누구랑 ) 근데 이제 막 삭제될 참이다.
+							// 그럼 차라리 충돌 안 된 걸로 하자 
+							// 아니라면 이제 충돌에 진입한 것이다.
+							if (!vecLeft[i]->IsDead() && !vecRight[j]->IsDead())
+							{
+								pLeftCol->OnCollisionEnter(pRightCol);
+								pRightCol->OnCollisionEnter(pLeftCol);
+								iter->second = true;
+							}
+
+
+						}
+					}
+					else// 충돌하고 있지 않은 경우
+					{
+						if (iter->second)
+						{
+							// 충돌하다가 이번에 충돌이 끝났다. ( 누구랑 )
+							pLeftCol->OnCollisionExit(pRightCol);
+							pRightCol->OnCollisionExit(pLeftCol);
+							iter->second = false;
+						}
+
+					}
+				}
 			}
 		}
 	}

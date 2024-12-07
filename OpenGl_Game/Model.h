@@ -20,7 +20,7 @@ using glm::vec4;
 using std::string;
 
 class Collider;
-
+class Object;
 #define MAX_LINE_LENGTH 128
 
 class Vertex {
@@ -57,7 +57,8 @@ public:
     mat4 _scale;
     mat4 _FT;
     GLuint VAOs[6], VBOs[6], EBOs[6];
-    Collider* collider;  // Collider 추가
+
+    Collider* _collider;  // Collider 추가
 	vec3 _position;
 
 public:
@@ -69,6 +70,12 @@ public:
     virtual void initCollider() {};
     // Collider 업데이트 함수 추가
     virtual void updateCollider() {};
+	Collider* getCollider() { return _collider; }   
+	vec3 getPosition() { return _position; }
+
+    virtual void OnCollision(Collider* _pOther) {};
+    virtual void OnCollisionEnter(Collider* _pOther) {};
+    virtual void OnCollisionExit(Collider* _pOther) {};
 
     virtual void model_init_buffer() = 0;
 };
@@ -98,7 +105,9 @@ public:
     void updateAABB();
     virtual void initCollider();
     virtual void updateCollider();
-
+    virtual void OnCollision(Collider* _pOther);
+    virtual void OnCollisionEnter(Collider* _pOther);
+    virtual void OnCollisionExit(Collider* _pOther) ;
 
 public:
     vector<vector<unsigned int>> _face_indices;
@@ -107,6 +116,7 @@ public:
 	GLfloat _zoffset;
     float _angle;
     string _name;
+	Object* _owner;
     // AABB 바운딩 볼륨 멤버 변수 추가
     vec3 _minAABB;
     vec3 _maxAABB;

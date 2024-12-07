@@ -1,7 +1,8 @@
 #pragma once
 
 class Object;
-
+class Cube;
+class Model;
 // 충돌체를 소유한 오브젝트는 이동할 때 그 충돌체가 같이 이동하여야 함
 class Collider
 {
@@ -9,7 +10,7 @@ class Collider
 private:
 	static UINT g_iNextID;
 	// Collider 를 소유하고 있는 오브젝트
-	Object* m_pOwner;
+	Cube* m_pOwner;
 
 	// 오프셋, 기준 위치(오브젝트)로부터 상대적인 차이값 / 이 값을 이용하여 충돌체 각각을 이동시킨다.
 	vec3	m_vOffsetPos;
@@ -47,7 +48,7 @@ public:
 	vec3 GetScale() { return m_vScale; }
 	vec3 GetFinalPos() { return m_vFinalPos; }
 
-	Object* GetObj() { return m_pOwner; }
+	Cube* GetObj() { return m_pOwner; }
 	UINT GetID() { return m_iID; }
 
 public:
@@ -72,5 +73,6 @@ public:
 
 
 	friend class CObject;
+	friend class Cube;
 };
 

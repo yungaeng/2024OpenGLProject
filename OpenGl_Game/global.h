@@ -18,7 +18,7 @@ enum class GROUP_TYPE
 	TILE,
 	BLOCK,
 	GROUND,
-
+	GUN,
 	MONSTER,
 	PLAYER,
 	PROJ_PLAYER,	// 플레이어 투사체

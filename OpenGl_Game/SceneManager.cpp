@@ -17,7 +17,8 @@ void SceneManager::AddObject(Object* object, GROUP_TYPE _eType)
 }
 
 void SceneManager::RemoveObject(Object* object) {
-	_objects.erase(std::remove(_objects.begin(), _objects.end(), object), objects.end());
+	for (auto& objects : _objects)
+		objects.erase(std::remove(objects.begin(), objects.end(), object), objects.end());
 }
 
 void SceneManager::DrawObjects(GLuint shaderProgramID) {
@@ -45,6 +46,7 @@ void SceneManager::draw(GLuint shaderProgramID)
 {
 	for (auto& object : _objects)
 	{
-		object->draw(shaderProgramID);
+		for (auto& obj : object)
+			obj->draw(shaderProgramID);
 	}
 }

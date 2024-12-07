@@ -65,6 +65,8 @@ void CameraManager::processMouseMovement(float xoffset, float yoffset) {
         pitch = 20.0f;
     if (pitch < -20.0f)
         pitch = -20.0f;
+	
+	
 
     glm::vec3 direction;
     direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));

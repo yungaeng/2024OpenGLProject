@@ -38,6 +38,11 @@ void Robot::initializeParts() {
     addPart(leftArm);
     addPart(rightArm);
     addPart(head);
+
+	for (auto& a : _parts)
+	{
+		a->initCollider();
+	}
 }
 
 void Robot::update(float deltaTime) {

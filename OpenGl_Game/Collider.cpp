@@ -35,7 +35,7 @@ Collider::~Collider()
 void Collider::finalupdate()
 {
 	// Object의 위치를 따라간다.
-	vec3 vObjectPos = m_pOwner->getPos();
+	vec3 vObjectPos = m_pOwner->getPosition();
 	m_vFinalPos = vObjectPos + m_vOffsetPos;
 	assert(0 <= m_iCol);
 }

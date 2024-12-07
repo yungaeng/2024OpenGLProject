@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include "Object.h"
 #include "Model.h"`
 #include <iostream>
 #include <fstream>
@@ -25,6 +26,8 @@ Model::Model()
     , _scale(mat4(1.f))
     , _FT(mat4(1.f))
 	, _position(vec3(0.f))
+	, _collider(nullptr)
+
 {
     glGenVertexArrays(6, VAOs);
     glGenBuffers(6, VBOs);
@@ -39,6 +42,8 @@ Model::Model(Model_Type type)
     , _scale(mat4(1.f))
     , _FT(mat4(1.f))
 	, _position(vec3(0.f))
+    , _collider(nullptr)
+
 {
     glGenVertexArrays(6, VAOs);
     glGenBuffers(6, VBOs);
@@ -151,10 +156,11 @@ void Cube::model_init_buffer()
 
 void Cube::Draw(GLuint shaderProgramID)
 {
-    _FT = _trs * _scale;
+    _FT = _trs *_rot * _scale;
 
     // Collider 업데이트
-    updateCollider();
+    if(_collider != nullptr)
+        updateCollider();
     glUseProgram(shaderProgramID);
     model_init_buffer();
 
@@ -200,22 +206,37 @@ void Cube::updateAABB()
 
 void Cube::initCollider()
 {
-    collider = new Collider();
-    collider->SetScale(vec3(1.0f));  // 기본 스케일 설정
+    _collider = new Collider();
+    _collider->SetScale(vec3(1.0f));  // 기본 스케일 설정
 }
 
 void Cube::updateCollider()
 {
+	if (_collider == nullptr)
+		return;
     // 월드 변환 행렬을 사용하여 AABB 계산
     vec3 position = vec3(_FT * vec4(0.f, 0.f, 0.f, 1.f));
-    vec3 scale = vec3(_scale[0][0], _scale[1][1], _scale[2][2]) * collider->GetScale();
+    vec3 scale = vec3(_scale[0][0], _scale[1][1], _scale[2][2]) * _collider->GetScale();
 
     vec3 halfScale = scale * 0.5f;
     vec3 minAABB = position - halfScale;
     vec3 maxAABB = position + halfScale;
 
-    collider->SetAABB(minAABB, maxAABB);
-    collider->SetFinalPos(position);
+    _collider->SetAABB(minAABB, maxAABB);
+    _collider->SetFinalPos(position);
+}
+
+void Cube::OnCollision(Collider* _pOther)
+{
+}
+
+void Cube::OnCollisionEnter(Collider* _pOther)
+{
+    _owner;
+}
+
+void Cube::OnCollisionExit(Collider* _pOther)
+{
 }
 
 Pyramid::Pyramid() : Model(Type_pyramid) {

@@ -47,14 +47,14 @@ void Rifle::draw(GLuint shaderProgramID) {
             part->_trs = glm::translate(part->_trs, sidetrs);
             part->_trs = glm::translate(part->_trs, downtrs);
             // 카메라의 시선 방향에 따라 회전 변환 적용
-            mat4 rotation = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
+            part->_rot = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
             // 
 
             // 스케일 변환
             part->_scale = glm::scale(mat4(1.f), vec3(0.1f, 0.1f, 1.5f));
 
             // 전체 변환 행렬 구성
-            part->_FT = part->_trs * rotation * part->_scale;
+            part->_FT = part->_trs * part->_rot * part->_scale;
 
             glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(part->_FT));
             part->Draw(shaderProgramID);
@@ -70,13 +70,13 @@ void Rifle::draw(GLuint shaderProgramID) {
             part->_trs = glm::translate(part->_trs, downtrs);
 			part->_trs = glm::translate(part->_trs, fronttrs);
             // 카메라의 시선 방향에 따라 회전 변환 적용
-            mat4 rotation = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
+            part->_rot = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
 
             // 스케일 변환
             part->_scale = glm::scale(mat4(1.f), vec3(0.05f, 0.04f, 1.f));
 
             // 전체 변환 행렬 구성
-            part->_FT = part->_trs * rotation * part->_scale;
+            part->_FT = part->_trs * part->_rot * part->_scale;
 
             glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(part->_FT));
             part->Draw(shaderProgramID);
@@ -88,11 +88,11 @@ void Rifle::draw(GLuint shaderProgramID) {
 			part->_trs = glm::translate(part->_trs, glm::normalize(cameraFront) * 0.3f);
 
             // 카메라의 시선 방향에 따라 회전 변환 적용
-            mat4 rotation = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
+            part->_rot = glm::inverse(glm::lookAt(vec3(0.f), cameraFront, cameraUp));
             // 스케일 변환
             part->_scale = glm::scale(mat4(1.f), vec3(0.005f, 0.00325f, 0.005f));
             // 전체 변환 행렬 구성
-            part->_FT = part->_trs * rotation * part->_scale;
+            part->_FT = part->_trs * part->_rot * part->_scale;
             glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(part->_FT));
             part->Draw(shaderProgramID);
         }

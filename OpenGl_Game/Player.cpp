@@ -15,10 +15,10 @@ Player::Player() : _curgun(nullptr) {
 
 Player::~Player()
 {// 플레이어 파츠를 삭제합니다.
-	for (auto& part : parts) {
+	for (auto& part : _parts) {
 		delete part;
 	}
-	parts.clear();
+    _parts.clear();
 }
 
 void Player::update(float deltaTime) {
