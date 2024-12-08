@@ -16,6 +16,7 @@
 #include "Rifle.h"
 #include "Player.h"
 #include "Robot.h"
+#include "ColMgr.h"
 
 
 void setMousePosition(int x, int y) {
@@ -132,8 +133,9 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     glutPassiveMotionFunc(MouseMove);
     glutMotionFunc(MouseMove);
 	make_shaderProgram();
-    TimeManager::getInstance().Initialize();
-	
+    TimeManager::getInstance().Initialize();	
+	CameraManager::getInstance().update(KeyManager::getInstance(), TimeManager::getInstance().GetElapsedTime());
+
     glutSetCursor(GLUT_CURSOR_NONE);
 	// 화면 밖으로 나가지 않도록
 	
@@ -145,10 +147,13 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 
     plight_cube = new Cube();
 	Player* player = new Player();
-	player->setGun(new Rifle());
+	Rifle* rifle = new Rifle();
+	player->setGun(rifle);
 	SceneManager::getInstance().ResistPlayer(player);
 	SceneManager::getInstance().AddObject(player->getGun(),GROUP_TYPE::GUN);
-	SceneManager::getInstance().AddObject(new Robot,GROUP_TYPE::MONSTER);
+	Robot* robot = new Robot();
+	SceneManager::getInstance().AddObject(robot,GROUP_TYPE::MONSTER);
+	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::MONSTER);
 	InitBuffer();
 	glLineWidth(2);
 	glPointSize(2);
@@ -394,6 +399,9 @@ void Idle()
 	}
 	CameraManager::getInstance().update(KeyManager::getInstance(), elapsedTime);
 	SceneManager::getInstance().update(elapsedTime);
+	CollisionMgr::GetInst()->update();
+
+
 	glutPostRedisplay();
 }
 

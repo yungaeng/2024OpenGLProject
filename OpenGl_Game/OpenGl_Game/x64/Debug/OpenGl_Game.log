@@ -1,25 +1,4 @@
-﻿  ColMgr.cpp
-  Collider.cpp
-  Gun.cpp
-  Model.cpp
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(3,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(171,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp(318,59): warning C4267: '인수': 'size_t'에서 'GLsizei'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster.cpp
-  Object.cpp
-  Player.cpp
-  Rifle.cpp
+﻿  Rifle.cpp
   Robot.cpp
-  SceneManager.cpp
-  main.cpp
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(86,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,51): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(221,41): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(224,46): warning C4305: '인수': 'double'에서 'GLfloat'(으)로 잘립니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(395,65): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(396,37): warning C4244: '인수': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(427,17): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp(428,17): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
   OpenGl_Game.vcxproj -> C:\Users\Programmer\OpenGL_Game\OpenGl_Game\x64\Debug\OpenGl_Game.exe

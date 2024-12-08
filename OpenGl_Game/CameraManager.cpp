@@ -5,6 +5,8 @@ CameraManager::CameraManager()
     : position(0.0f, 0.5f, 5.0f),
     target(0.0f, 0.0f, 0.0f),
     up(0.0f, 1.0f, 0.0f),
+	n(0.0f, 0.0f, -1.0f),
+	u(1.0f, 0.0f, 0.0f),
     v(0.0f, 1.0f, 0.0f),
     speed(0.5f),
     rotationSpeed(5.f),

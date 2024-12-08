@@ -2,10 +2,6 @@
 #include "Collider.h"
 #include "Object.h"
 
-
-
-
-
 UINT Collider::g_iNextID = 0;
 
 Collider::Collider()
@@ -42,10 +38,7 @@ void Collider::finalupdate()
 
 void Collider::render(HDC _dc)
 {
-	
-
 }
-
 
 
 void Collider::OnCollision(Collider* _pOther)

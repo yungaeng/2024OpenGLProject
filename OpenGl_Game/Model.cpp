@@ -77,6 +77,10 @@ Cube::Cube(string name)
     , _yoffset(0.5f)
     , _zoffset(0.5f)
 	, _name(name)
+	, _maxAABB(vec3(0.f))
+	, _minAABB(vec3(0.f))
+	, _owner(nullptr)
+
 {
     // 큐브 모델 초기화
     read_obj_file("cube.obj", *this);
@@ -158,9 +162,6 @@ void Cube::Draw(GLuint shaderProgramID)
 {
     _FT = _trs *_rot * _scale;
 
-    // Collider 업데이트
-    if(_collider != nullptr)
-        updateCollider();
     glUseProgram(shaderProgramID);
     model_init_buffer();
 
@@ -202,28 +203,32 @@ void Cube::updateAABB()
         _minAABB = glm::min(_minAABB, vertex);
         _maxAABB = glm::max(_maxAABB, vertex);
     }
+    _collider->SetAABB(_minAABB, _maxAABB);
 }
 
 void Cube::initCollider()
 {
     _collider = new Collider();
     _collider->SetScale(vec3(1.0f));  // 기본 스케일 설정
+    _collider->setOwner(this);
 }
 
 void Cube::updateCollider()
 {
 	if (_collider == nullptr)
 		return;
-    // 월드 변환 행렬을 사용하여 AABB 계산
-    vec3 position = vec3(_FT * vec4(0.f, 0.f, 0.f, 1.f));
-    vec3 scale = vec3(_scale[0][0], _scale[1][1], _scale[2][2]) * _collider->GetScale();
 
-    vec3 halfScale = scale * 0.5f;
-    vec3 minAABB = position - halfScale;
-    vec3 maxAABB = position + halfScale;
+    updateAABB();
+    //// 월드 변환 행렬을 사용하여 AABB 계산
+    //vec3 position = vec3(_FT * vec4(0.f, 0.f, 0.f, 1.f));
+    //vec3 scale = vec3(_scale[0][0], _scale[1][1], _scale[2][2]) * _collider->GetScale();
 
-    _collider->SetAABB(minAABB, maxAABB);
-    _collider->SetFinalPos(position);
+    //vec3 halfScale = scale * 0.5f;
+    //vec3 minAABB = position - halfScale;
+    //vec3 maxAABB = position + halfScale;
+
+    //_collider->SetAABB(minAABB, maxAABB);
+    //_collider->SetFinalPos(position);
 }
 
 void Cube::OnCollision(Collider* _pOther)
@@ -232,7 +237,7 @@ void Cube::OnCollision(Collider* _pOther)
 
 void Cube::OnCollisionEnter(Collider* _pOther)
 {
-    _owner;
+    int a = 0;
 }
 
 void Cube::OnCollisionExit(Collider* _pOther)

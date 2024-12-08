@@ -30,14 +30,13 @@ private:
 	vec3 _minAABB;
 	vec3 _maxAABB;
 
-
 public:
 	// AABB 설정 및 가져오기 함수 추가
 	void SetAABB(const vec3& min, const vec3& max) {
 		_minAABB = min;
 		_maxAABB = max;
 	}
-
+	void setOwner(Cube* _pOwner) { m_pOwner = _pOwner; }
 	vec3 GetMinAABB() const { return _minAABB; }
 	vec3 GetMaxAABB() const { return _maxAABB; }
 	void SetOffsetPos(vec3 _vPos) { m_vOffsetPos = _vPos; }
@@ -60,7 +59,6 @@ public:
 	void OnCollision(Collider* _pOther);		// 충돌 중인 경우 호출되는 함수
 	void OnCollisionEnter(Collider* _pOther);	// 충돌에 막 진입한 경우 호출되는 함수
 	void OnCollisionExit(Collider* _pOther);	// 충돌에서 벗어난 경우 호출되는 함수
-
 
 	// 대입 연산자 자체 삭제하기 - 쓸 이유는 없는 기본 연산자가 실수로라도 만들어지면 안 됨
 	Collider& operator = (Collider& _origin) = delete;
