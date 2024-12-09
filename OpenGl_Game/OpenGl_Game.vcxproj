@@ -137,6 +137,8 @@
     <ClInclude Include="global.h" />
     <ClInclude Include="GLU_Object.h" />
     <ClInclude Include="Gun.h" />
+    <ClInclude Include="Healpack.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="Monster.h" />
@@ -155,6 +157,8 @@
     <ClCompile Include="ColMgr.cpp" />
     <ClCompile Include="GLU_Object.cpp" />
     <ClCompile Include="Gun.cpp" />
+    <ClCompile Include="Healpack.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="KeyManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model.cpp" />

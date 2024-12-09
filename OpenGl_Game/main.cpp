@@ -17,7 +17,7 @@
 #include "Player.h"
 #include "Robot.h"
 #include "ColMgr.h"
-
+#include "Healpack.h"
 
 void setMousePosition(int x, int y) {
     // 마우스 위치를 설정하는 함수, 처음에 마우스 중앙 고정용도로 사용
@@ -154,6 +154,14 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 	Robot* robot = new Robot();
 	SceneManager::getInstance().AddObject(robot,GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::MONSTER);
+
+
+	// 12/09 힐팩 추가
+	Healpack* healpack = new Healpack();
+	SceneManager::getInstance().AddObject(healpack, GROUP_TYPE::ITEM);
+	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::ITEM);
+
+
 	InitBuffer();
 	glLineWidth(2);
 	glPointSize(2);

@@ -76,6 +76,12 @@
     <Filter Include="소스 파일\02. Component\Collider">
       <UniqueIdentifier>{1fe4bc14-f0ed-420d-85de-c1f94505da79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Item">
+      <UniqueIdentifier>{32656bd9-f667-45e6-9a50-c3c07a477a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Item\Healpack">
+      <UniqueIdentifier>{47888ebf-90ac-4f03-8ba9-e33154224dff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component_18.h">
@@ -132,6 +138,12 @@
     <ClInclude Include="Collider.h">
       <Filter>소스 파일\02. Component\Collider</Filter>
     </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일\03. Model\Object\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Healpack.h">
+      <Filter>소스 파일\03. Model\Object\Item\Healpack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -184,6 +196,12 @@
     </ClCompile>
     <ClCompile Include="Collider.cpp">
       <Filter>소스 파일\02. Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\03. Model\Object\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Healpack.cpp">
+      <Filter>소스 파일\03. Model\Object\Item\Healpack</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

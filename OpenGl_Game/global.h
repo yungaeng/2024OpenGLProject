@@ -23,6 +23,8 @@ enum class GROUP_TYPE
 	PLAYER,
 	PROJ_PLAYER,	// 플레이어 투사체
 	PROJ_MONSTER,	// 몬스터 투사체
+	// 1209 아이템 추가
+	ITEM,
 
 
 	// 여기서 UI는 모든 오브젝트의 위에 그려지도록 순서 조정
