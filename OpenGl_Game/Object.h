@@ -22,6 +22,9 @@ public:
     void SetDead() { m_bAlive = false; }
 	vec3 getPos() { return _objectpos; }
 	vector<Cube*>& getParts() { return _parts; }
+    virtual void OnCollisionEnter(Collider* _pOther) {}
+    virtual void OnCollision(Collider* _pOther) {}
+    virtual void OnCollisionExit(Collider* _pOther) {}
     
 protected:
     std::vector<Cube*> _parts;

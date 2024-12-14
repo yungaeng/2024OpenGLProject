@@ -12,9 +12,6 @@ Object::Object()
 
 Object::~Object()
 {
-    for (auto& part : _parts) {
-        delete part;
-    }
 }
 
 void Object::addPart(Cube* part)

@@ -13,10 +13,10 @@ Gun::Gun()
 	, _reloadTimer(0)
 	, _fireTimer(0)
 {
-	for (auto& a : _parts)
+	/*for (auto& a : _parts)
 	{
 		a->initCollider();
-	}
+	}*/
 }
 
 Gun::~Gun()

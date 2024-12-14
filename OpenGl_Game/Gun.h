@@ -19,6 +19,7 @@ public:
 public:
     virtual void update(float deltaTime) override = 0;
 	virtual void Shoot() = 0;
+	virtual void OnCollisionEnter(Collider* _pOther) = 0;
 public:
 	void draw(GLuint shaderProgramID) override = 0;
 public:

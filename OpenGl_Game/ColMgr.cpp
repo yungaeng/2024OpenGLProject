@@ -66,7 +66,7 @@ void CollisionMgr::CollisionUpdateGroup(GROUP_TYPE _eleft, GROUP_TYPE _eright)
 
 					Collider* pLeftCol = lpart->getCollider();
 					Collider* pRightCol = rpart->getCollider();
-
+					
 					// 본격적인 충돌체크 - 충돌체 조합 아이디 생성
 					COLLIDER_ID ID;
 					ID.Left_id = pLeftCol->GetID();

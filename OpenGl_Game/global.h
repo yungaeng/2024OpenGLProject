@@ -1,6 +1,6 @@
 #pragma once
 #define _CRT_SECURE_NO_WARNINGS
-// SIngleton 매크로
+// Singleton 매크로
 #define SINGLE(type) public:\
 						static type* GetInst()\
 						{\
@@ -26,10 +26,18 @@ enum class GROUP_TYPE
 	// 1209 아이템 추가
 	ITEM,
 
-
 	// 여기서 UI는 모든 오브젝트의 위에 그려지도록 순서 조정
 	UI = 31,
 	END = 32,
+};
+
+enum class EVENT_TYPE
+{
+	CREATE_OBJECT,
+	DELETE_OBJECT,
+	SCENE_CHANGE,
+	CHANGE_AI_STATE,
+	END,
 };
 
 #include <gl/glew.h>
@@ -40,6 +48,7 @@ enum class GROUP_TYPE
 #include <glm/ext.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include<map>
+#include "func.h"
 using std::map;
 using std::make_pair;
 float Random_0_to_1f();
@@ -50,3 +59,4 @@ using glm::radians;
 using glm::vec2;
 using glm::vec3;
 using glm::vec4;
+

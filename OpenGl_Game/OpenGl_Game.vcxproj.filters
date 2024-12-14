@@ -82,6 +82,15 @@
     <Filter Include="소스 파일\03. Model\Object\Item\Healpack">
       <UniqueIdentifier>{47888ebf-90ac-4f03-8ba9-e33154224dff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Bullet">
+      <UniqueIdentifier>{382e83c5-9ec1-47d6-ba66-c6d6e7a9bcd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Manager\Eventmanager">
+      <UniqueIdentifier>{3e2ba783-ce15-4e3f-a00b-aa716e1dc62a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\04. Function">
+      <UniqueIdentifier>{8583546c-14fe-4407-a4d5-a04f31505174}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component_18.h">
@@ -144,6 +153,15 @@
     <ClInclude Include="Healpack.h">
       <Filter>소스 파일\03. Model\Object\Item\Healpack</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>소스 파일\03. Model\Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>소스 파일\01. Manager\Eventmanager</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>소스 파일\04. Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -202,6 +220,15 @@
     </ClCompile>
     <ClCompile Include="Healpack.cpp">
       <Filter>소스 파일\03. Model\Object\Item\Healpack</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>소스 파일\03. Model\Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Eventmanager.cpp">
+      <Filter>소스 파일\01. Manager\Eventmanager</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>소스 파일\04. Function</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

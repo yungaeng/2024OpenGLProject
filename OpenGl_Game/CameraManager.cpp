@@ -2,7 +2,7 @@
 #include "KeyManager.h"
 
 CameraManager::CameraManager()
-    : position(0.0f, 0.5f, 5.0f),
+    : position(0.0f, 0.65f, 5.0f),  // 카메라 위치 0.65로 설정 12.13
     target(0.0f, 0.0f, 0.0f),
     up(0.0f, 1.0f, 0.0f),
 	n(0.0f, 0.0f, -1.0f),
@@ -84,7 +84,9 @@ void CameraManager::processMouseMovement(float xoffset, float yoffset) {
 }
 
 void CameraManager::moveForward(float deltaTime) {
-    glm::vec3 direction = glm::normalize(glm::vec3(0.f, 0.f, -1.f));
+	glm::vec3 ntarget = glm::normalize(this->target - position);
+    glm::vec3 direction = glm::normalize(ntarget);
+    direction.y = 0;
     position += direction * speed * deltaTime;
     target += direction * speed * deltaTime;
 }

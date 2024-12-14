@@ -18,6 +18,7 @@
 #include "Robot.h"
 #include "ColMgr.h"
 #include "Healpack.h"
+#include "Eventmanager.h"
 
 void setMousePosition(int x, int y) {
     // 마우스 위치를 설정하는 함수, 처음에 마우스 중앙 고정용도로 사용
@@ -74,7 +75,6 @@ vec3 g_camerapos = vec3(0.f, 0.f, 0.f);
 TTM cam_rot = Mode_Default;
 
 Cube* plight_cube;
-
 
 glm::mat4 invertTranslation(const glm::mat4& matrix) {
     glm::mat4 invertedMatrix = matrix;
@@ -155,12 +155,13 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 	SceneManager::getInstance().AddObject(robot,GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::MONSTER);
 
-
 	// 12/09 힐팩 추가
 	Healpack* healpack = new Healpack();
 	SceneManager::getInstance().AddObject(healpack, GROUP_TYPE::ITEM);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::ITEM);
 
+	// 12/13
+	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
 
 	InitBuffer();
 	glLineWidth(2);
@@ -248,6 +249,8 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
 	SceneManager::getInstance().draw(shaderProgramID);
 
     glutSwapBuffers(); //--- 화면에 출력하기
+
+
 
 }
 
@@ -390,8 +393,6 @@ void make_fragmentShaders()
 
 void UserTimerFunc(int value)
 {
- 
-
     InitBuffer();
 	glutPostRedisplay();
 	if (on_timer)
@@ -409,8 +410,9 @@ void Idle()
 	SceneManager::getInstance().update(elapsedTime);
 	CollisionMgr::GetInst()->update();
 
-
 	glutPostRedisplay();
+
+	EventMgr::GetInst()->update();
 }
 
 void KeyboardDown(unsigned char key, int x, int y) {

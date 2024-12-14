@@ -10,6 +10,9 @@
 #include <gl/freeglut_ext.h>
 #include <random>
 #include "Collider.h"
+#include "Robot.h"
+#include "Gun.h"
+#include "Bullet.h" 
 
 float Random_0_to_1f_model() {
     static std::random_device rd;
@@ -50,7 +53,9 @@ Model::Model(Model_Type type)
     glGenBuffers(6, EBOs);
 }
 
-Model::~Model() {}
+Model::~Model() {
+    delete _collider;
+}
 
 
 Cube::Cube()
@@ -160,16 +165,29 @@ void Cube::model_init_buffer()
 
 void Cube::Draw(GLuint shaderProgramID)
 {
-    _FT = _trs *_rot * _scale;
-
-    glUseProgram(shaderProgramID);
+    //_FT = _trs *_rot * _scale;
     model_init_buffer();
 
-    for (int i = 0; i < _face_indices.size(); ++i) 
+	if (_name == "CrossLine")
     {
-        glBindVertexArray(VAOs[i]);
+        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
-        glDrawElements(GL_TRIANGLES, _face_indices[i].size(), GL_UNSIGNED_INT, 0);
+        // 앞면만 그리기
+        glBindVertexArray(VAOs[5]); // 앞면에 해당하는 VAO 사용
+        glDrawElements(GL_POLYGON, _face_indices[5].size(), GL_UNSIGNED_INT, 0);
+    }
+
+    else
+    {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glUseProgram(shaderProgramID);
+
+        for (int i = 0; i < _face_indices.size(); ++i)
+        {
+            glBindVertexArray(VAOs[i]);
+
+            glDrawElements(GL_TRIANGLES, _face_indices[i].size(), GL_UNSIGNED_INT, 0);
+        }
     }
 }
 
@@ -208,6 +226,7 @@ void Cube::updateAABB()
 
 void Cube::initCollider()
 {
+
     _collider = new Collider();
     _collider->SetScale(vec3(1.0f));  // 기본 스케일 설정
     _collider->setOwner(this);
@@ -233,15 +252,33 @@ void Cube::updateCollider()
 
 void Cube::OnCollision(Collider* _pOther)
 {
+	if (_owner != nullptr) {
+		_owner->OnCollision(_pOther);
+	}
+
 }
 
 void Cube::OnCollisionEnter(Collider* _pOther)
 {
-    int a = 0;
+    if (_owner != nullptr) {
+        _owner->OnCollisionEnter(_pOther);
+    }
 }
 
 void Cube::OnCollisionExit(Collider* _pOther)
 {
+	if (_owner != nullptr) {
+		_owner->OnCollisionExit(_pOther);
+	}
+}
+
+void Cube::setColor(vec3 color)
+{
+	for (auto& vertex : vertices) {
+		vertex.r = color.r;
+		vertex.g = color.g;
+		vertex.b = color.b;
+	}
 }
 
 Pyramid::Pyramid() : Model(Type_pyramid) {

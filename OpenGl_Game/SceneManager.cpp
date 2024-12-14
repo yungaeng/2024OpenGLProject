@@ -1,7 +1,5 @@
-
 // SceneManager.cpp
 #include "global.h"
-
 #include "SceneManager.h"
 #include "Object.h"
 #include "Player.h"
@@ -21,12 +19,7 @@ void SceneManager::RemoveObject(Object* object) {
 		objects.erase(std::remove(objects.begin(), objects.end(), object), objects.end());
 }
 
-void SceneManager::DrawObjects(GLuint shaderProgramID) {
-    for (auto& object : _objects)
-    {
 
-    }
-}
 
 void SceneManager::update(float deltaTime)
 {
@@ -40,13 +33,27 @@ void SceneManager::update(float deltaTime)
 			}
 		}
 	}
+
+
+	
 }
 
 void SceneManager::draw(GLuint shaderProgramID)
 {
 	for (auto& object : _objects)
 	{
-		for (auto& obj : object)
-			obj->draw(shaderProgramID);
+		vector<Object*>::iterator iter = object.begin();
+		for (; iter != object.end();)
+			if (!(*iter)->IsDead())
+			{
+				(*iter)->draw(shaderProgramID);
+				++iter;
+			}
+			/*else
+			{
+				iter = object.erase(iter);
+			}*/
 	}
 }
+
+

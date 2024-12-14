@@ -12,6 +12,7 @@ public:
     void update(float deltaTime) override;
     void Shoot() override;
     void draw(GLuint shaderProgramID) override;
+	virtual void OnCollisionEnter(Collider* _pOther) override;
 
 private:
     void reload();

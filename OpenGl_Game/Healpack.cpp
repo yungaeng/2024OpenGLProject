@@ -2,6 +2,7 @@
 
 // Healpack.cpp
 #include "Healpack.h"
+#include "Collider.h"
 
 Healpack::Healpack() {
     initializeParts();
@@ -15,6 +16,10 @@ Healpack::~Healpack() {
 void Healpack::initializeParts() {
     body = new Cube("body");
     cross = new Cube("cross");
+	// color select
+	body->setColor(glm::vec3(0.1f, 1.0f, 0.1f));
+	cross->setColor(glm::vec3(0.1f, 1.0f, 0.1f));
+
 
     // Collider ÃÊ±âÈ­
     body->initCollider();
@@ -68,6 +73,11 @@ void Healpack::draw(GLuint shaderProgramID) {
     for (auto& part : _parts) {
         glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(part->_FT));
         part->Draw(shaderProgramID);
+
+		if (part->_collider != nullptr)
+		{
+			part->_collider->renderAABB(shaderProgramID);
+		}
     }
 }
 

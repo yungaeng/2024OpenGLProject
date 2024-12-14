@@ -1,6 +1,10 @@
 // Rifle.cpp
+#include "global.h"
 #include "Rifle.h"
 #include "CameraManager.h"
+#include "MouseManager.h"
+#include "Bullet.h"
+#include "SceneManager.h"
 
 Rifle::Rifle() {
     // Initialize rifle-specific stats
@@ -10,18 +14,25 @@ Rifle::Rifle() {
     _range = 100.0f;
     _reloadTimer = 2.0f;
     _fireTimer = 0.1f;
+    Cube* cross;
 	addPart(new Cube("Barrel"));    // Barrel
 	addPart(new Cube("Body"));      // Body
-	addPart(new Cube("CrossLine")); // Stock
-	for (auto& a : _parts)
+	addPart(cross = new Cube("CrossLine")); // cross line
+	cross->setColor(vec3(1.f, 1.f, 1.f));   
+
+    for (auto& a : _parts)
 	{
 		a->_owner = this;
-		a->initCollider();
+		if (a->_name != "CrossLine")
+		    a->initCollider();
 	}
 }
 
 Rifle::~Rifle() {
     // Cleanup if necessary
+	for (auto& part : _parts) {
+		delete part;
+	}
 }
 
 void Rifle::update(float deltaTime) {
@@ -30,8 +41,17 @@ void Rifle::update(float deltaTime) {
     vec3 cameraFront = CameraManager::getInstance().getFrontVector();
     vec3 cameraUp = CameraManager::getInstance().getUpVector();
     vec3 cameraRight = glm::cross(cameraFront, cameraUp);
-
     mat4 model = mat4(1.f);
+
+	if (MouseManager::getInstance().IsLeftButtonPressed() && _fireTimer <= 0) {
+		// ÃÑ¾Ë ¹ß»ç
+		Shoot();
+		_fireTimer = 0.1f;
+	}
+    else {
+        _fireTimer -= deltaTime;
+    }
+	
 
     for (auto& part : _parts) {
         if (part->_name == "Body")
@@ -89,6 +109,18 @@ void Rifle::update(float deltaTime) {
 
 void Rifle::Shoot() {
 	// Implement shooting logic
+	// ÃÑ¾Ë »ý¼º
+	vec3 cameraPos = CameraManager::getInstance().getPosition();
+	vec3 cameraFront = CameraManager::getInstance().getFrontVector();
+	vec3 cameraUp = CameraManager::getInstance().getUpVector();
+	vec3 cameraRight = glm::cross(cameraFront, cameraUp);
+	vec3 bulletPos = cameraPos + cameraFront * 0.5f + cameraRight * 0.25f + cameraUp * -0.2f;
+	vec3 bulletDir = cameraFront;
+	Bullet* bullet = new Bullet(bulletPos, bulletDir, 10.f, 10.f);
+    bullet->setDamage(10.f);
+	CreateObject(bullet, GROUP_TYPE::PROJ_PLAYER);
+
+
 }
 
 void Rifle::draw(GLuint shaderProgramID) {
@@ -97,6 +129,11 @@ void Rifle::draw(GLuint shaderProgramID) {
         glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(part->_FT));
         part->Draw(shaderProgramID);
     }
+}
+
+void Rifle::OnCollisionEnter(Collider* _pOther)
+{
+
 }
 
 void Rifle::reload() {

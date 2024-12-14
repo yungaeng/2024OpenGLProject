@@ -108,6 +108,7 @@ public:
     virtual void OnCollision(Collider* _pOther);
     virtual void OnCollisionEnter(Collider* _pOther);
     virtual void OnCollisionExit(Collider* _pOther) ;
+    void setColor(vec3 color);
 
 public:
     vector<vector<unsigned int>> _face_indices;

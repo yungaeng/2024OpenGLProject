@@ -14,6 +14,7 @@ public:
     void MouseDown(int button);
     void MouseUp(int button);
     bool IsButtonPressed(int button) const;
+	bool IsLeftButtonPressed() const;
     void MouseMove(float xpos, float ypos, int windowWidth, int windowHeight);
 
     float GetXOffset() const;

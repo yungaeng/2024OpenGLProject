@@ -18,6 +18,14 @@ bool MouseManager::IsButtonPressed(int button) const {
     return false;
 }
 
+bool MouseManager::IsLeftButtonPressed() const {
+	auto it = mouseStates.find(0);
+	if (it != mouseStates.end()) {
+		return it->second;
+	}
+	return false;
+}
+
 void MouseManager::MouseMove(float xpos, float ypos, int windowWidth, int windowHeight) {
     // 마우스 위치를 윈도우 크기 내로 제한
     

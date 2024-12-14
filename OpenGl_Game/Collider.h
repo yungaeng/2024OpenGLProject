@@ -47,12 +47,12 @@ public:
 	vec3 GetScale() { return m_vScale; }
 	vec3 GetFinalPos() { return m_vFinalPos; }
 
-	Cube* GetObj() { return m_pOwner; }
+	Cube* GetCube() { return m_pOwner; }
 	UINT GetID() { return m_iID; }
 
 public:
 	void finalupdate();
-	void render(HDC _dc);
+	void renderAABB(GLuint shaderProgramID);
 
 public:
 	// 충돌 시점 함수 목록

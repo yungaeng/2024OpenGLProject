@@ -130,10 +130,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="CameraManager.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="ColMgr.h" />
     <ClInclude Include="component_18.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="func.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="GLU_Object.h" />
     <ClInclude Include="Gun.h" />
@@ -152,9 +155,12 @@
     <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CameraManager.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="ColMgr.cpp" />
+    <ClCompile Include="Eventmanager.cpp" />
+    <ClCompile Include="func.cpp" />
     <ClCompile Include="GLU_Object.cpp" />
     <ClCompile Include="Gun.cpp" />
     <ClCompile Include="Healpack.cpp" />
