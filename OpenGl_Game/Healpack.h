@@ -12,6 +12,7 @@ public:
     virtual void update(float deltaTime) override;
     virtual void draw(GLuint shaderProgramID) override;
 
+    void move(float deltaTime);
 private:
     // 몸통과 중간몸통을 구성 된 십자가 모양
     Cube* body;

@@ -49,10 +49,10 @@ void SceneManager::draw(GLuint shaderProgramID)
 				(*iter)->draw(shaderProgramID);
 				++iter;
 			}
-			/*else
+			else
 			{
 				iter = object.erase(iter);
-			}*/
+			}
 	}
 }
 

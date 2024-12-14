@@ -1,22 +1,22 @@
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Bullet.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Bullet.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\CameraManager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\CameraManager.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Collider.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Collider.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\ColMgr.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\ColMgr.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Eventmanager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Eventmanager.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\func.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\func.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\GLU_Object.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\GLU_Object.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Gun.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Gun.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Healpack.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Healpack.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Item.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Item.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\KeyManager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\KeyManager.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\main.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\main.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Model.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Model.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Monster.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Monster.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\MouseManager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\MouseManager.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Object.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Object.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Player.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Player.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Polygon_18.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Polygon_18.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Rifle.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Rifle.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\Robot.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\Robot.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\SceneManager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\SceneManager.obj
-C:\Users\Programmer\OpenGL_Game\OpenGl_Game\TimeManager.cpp;C:\Users\Programmer\OpenGL_Game\OpenGl_Game\OpenGl_Game\x64\Debug\TimeManager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Bullet.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Bullet.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\CameraManager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\CameraManager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Collider.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Collider.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\ColMgr.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\ColMgr.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Eventmanager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Eventmanager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\func.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\func.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\GLU_Object.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\GLU_Object.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Gun.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Gun.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Healpack.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Healpack.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Item.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Item.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\KeyManager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\KeyManager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\main.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\main.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Model.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Model.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Monster.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Monster.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\MouseManager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\MouseManager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Object.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Object.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Player.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Player.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Polygon_18.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Polygon_18.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Rifle.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Rifle.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\Robot.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\Robot.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\SceneManager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\SceneManager.obj
+E:\github rgst\2024OpenGLProject\OpenGl_Game\TimeManager.cpp;E:\github rgst\2024OpenGLProject\OpenGl_Game\OpenGl_Game\x64\Debug\TimeManager.obj

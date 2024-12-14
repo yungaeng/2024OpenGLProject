@@ -37,6 +37,8 @@ void Healpack::initializeParts() {
 
 // Healpack 클래스에 회전 상태를 저장할 멤버 변수 추가
 float rotationAngle = 0.0f;
+// Healpack 클래스에 초기 위치를 저장할 멤버 변수 추가
+glm::vec3 position = glm::vec3(0.f, 0.3f, -20.f);
 
 void Healpack::update(float deltaTime) {
     // 힐팩의 상태 업데이트
@@ -50,21 +52,28 @@ void Healpack::update(float deltaTime) {
     rotationAngle += rotationSpeed * deltaTime;
     if (rotationAngle > 360.f) rotationAngle -= 360.f; // 360도를 넘으면 초기화
 
-    // 힐팩 회전
-    body->_trs = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.3f, 2.f));
+    // 전진 속도 설정 (초당 1 단위 전진)
+    const float moveSpeed = 1.0f;
+
+    // 전진 계산 (힐팩의 Z축 방향으로 이동)
+    position.z += moveSpeed * deltaTime;
+
+    // 힐팩 회전 및 이동 변환 적용
+    body->_trs = glm::translate(glm::mat4(1.f), position);
     body->_FT = body->_trs * body->_rot * glm::rotate(glm::mat4(1.f), glm::radians(rotationAngle), glm::vec3(0.0f, 1.0f, 0.0f)) * body->_scale;
 
-    cross->_trs = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.3f, 2.f));
+    cross->_trs = glm::translate(glm::mat4(1.f), position);
     cross->_FT = cross->_trs * cross->_rot * glm::rotate(glm::mat4(1.f), glm::radians(rotationAngle), glm::vec3(0.0f, 1.0f, 0.0f)) * cross->_scale;
 }
 
 void Healpack::updatePartTransforms() {
     // 몸통 변환
-    body->_trs = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.3f, 2.f));
+    body->_trs = glm::translate(glm::mat4(1.f), position);
     body->_scale = glm::scale(glm::mat4(1.f), glm::vec3(0.3f, 0.5f, 0.3f));
     body->_FT = body->_trs * body->_scale;
-   // 중간 몸통 변환
-    cross->_trs = glm::translate(glm::mat4(1.f), glm::vec3(0.f, 0.3f, 2.f));
+
+    // 중간 몸통 변환
+    cross->_trs = glm::translate(glm::mat4(1.f), position);
     cross->_scale = glm::scale(glm::mat4(1.f), glm::vec3(0.7f, 0.2f, 0.3f));
     cross->_FT = cross->_trs * cross->_scale;
 }
