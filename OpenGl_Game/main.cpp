@@ -162,6 +162,8 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 
 	// 12/13
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::MONSTER, GROUP_TYPE::PROJ_PLAYER);
+	// 12/15 플레이어 / 아이템
+	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::ITEM, GROUP_TYPE::PROJ_PLAYER);
 
 	InitBuffer();
 	glLineWidth(2);

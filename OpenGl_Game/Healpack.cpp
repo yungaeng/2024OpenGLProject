@@ -1,8 +1,7 @@
-
-
 // Healpack.cpp
 #include "Healpack.h"
 #include "Collider.h"
+#include "Player.h"
 
 Healpack::Healpack() {
     initializeParts();
@@ -38,7 +37,7 @@ void Healpack::initializeParts() {
 // Healpack 클래스에 회전 상태를 저장할 멤버 변수 추가
 float rotationAngle = 0.0f;
 // Healpack 클래스에 초기 위치를 저장할 멤버 변수 추가
-glm::vec3 position = glm::vec3(0.f, 0.3f, -20.f);
+glm::vec3 position = glm::vec3(0.f, 0.3f, -10.f);
 
 void Healpack::update(float deltaTime) {
     // 힐팩의 상태 업데이트
@@ -64,6 +63,17 @@ void Healpack::update(float deltaTime) {
 
     cross->_trs = glm::translate(glm::mat4(1.f), position);
     cross->_FT = cross->_trs * cross->_rot * glm::rotate(glm::mat4(1.f), glm::radians(rotationAngle), glm::vec3(0.0f, 1.0f, 0.0f)) * cross->_scale;
+
+    // Collider 위치 업데이트
+    if (body->_collider != nullptr)
+        body->updateCollider();
+    if (cross->_collider != nullptr)
+        cross->updateCollider();
+
+    // 범위를 벗어나면 객체 제거
+    if (isOutOfRange()) {
+        DeleteObject(this);
+    }
 }
 
 void Healpack::updatePartTransforms() {
@@ -88,5 +98,27 @@ void Healpack::draw(GLuint shaderProgramID) {
 			part->_collider->renderAABB(shaderProgramID);
 		}
     }
+}
+
+void Healpack::OnCollisionEnter(Collider* _pOther)
+{
+    Object* otherObject = _pOther->GetCube()->_owner;
+    if (dynamic_cast<Player*>(otherObject) != nullptr)
+    {
+        DeleteObject(this);
+    }
+}
+
+void Healpack::OnCollision(Collider* _pOther)
+{
+}
+
+void Healpack::OnCollisionExit(Collider* _pOther)
+{
+}
+
+bool Healpack::isOutOfRange() const
+{
+    return _traveledDistance >= _range;
 }
 

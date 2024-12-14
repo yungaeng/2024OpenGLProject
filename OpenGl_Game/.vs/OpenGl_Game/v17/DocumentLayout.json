@@ -3,20 +3,68 @@
   "WorkspaceRootPath": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Healpack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Healpack.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Healpack.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Robot.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Robot.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:EventManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Collider.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Item.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:Collider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B2BC3B0-A752-463C-ADAA-C4209C8CA674}|OpenGl_Game.vcxproj|solutionrelative:SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +79,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Robot.cpp",
-              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp",
-              "RelativeDocumentMoniker": "Robot.cpp",
-              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp",
-              "RelativeToolTip": "Robot.cpp",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-14T17:52:20.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Monster.cpp",
-              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp",
-              "RelativeDocumentMoniker": "Monster.cpp",
-              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp",
-              "RelativeToolTip": "Monster.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-14T17:52:15.641Z",
+              "Title": "Healpack.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h",
+              "RelativeDocumentMoniker": "Healpack.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h",
+              "RelativeToolTip": "Healpack.h",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T17:36:26.485Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -64,28 +100,197 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
+              "Title": "Collider.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.h",
+              "RelativeDocumentMoniker": "Collider.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.h",
+              "RelativeToolTip": "Collider.h",
+              "ViewState": "AgIAACIAAAAAAAAAAAArwDEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:07:12.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventManager.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Eventmanager.h",
+              "RelativeDocumentMoniker": "Eventmanager.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Eventmanager.h",
+              "RelativeToolTip": "Eventmanager.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:06:58.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SceneManager.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\SceneManager.h",
+              "RelativeDocumentMoniker": "SceneManager.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\SceneManager.h",
+              "RelativeToolTip": "SceneManager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:04:44.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Robot.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.h",
+              "RelativeDocumentMoniker": "Robot.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.h",
+              "RelativeToolTip": "Robot.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:04:35.164Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "main.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T17:54:33.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Healpack.cpp",
               "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.cpp",
               "RelativeDocumentMoniker": "Healpack.cpp",
               "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.cpp",
               "RelativeToolTip": "Healpack.cpp",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCgAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-14T17:35:49.741Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Healpack.h",
-              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h",
-              "RelativeDocumentMoniker": "Healpack.h",
-              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Healpack.h",
-              "RelativeToolTip": "Healpack.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAALAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Monster.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.h",
+              "RelativeDocumentMoniker": "Monster.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.h",
+              "RelativeToolTip": "Monster.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-14T17:36:26.485Z",
+              "WhenOpened": "2024-12-14T18:12:49.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Player.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.h",
+              "RelativeDocumentMoniker": "Player.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.h",
+              "RelativeToolTip": "Player.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T17:54:08.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Player.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.cpp",
+              "RelativeDocumentMoniker": "Player.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Player.cpp",
+              "RelativeToolTip": "Player.cpp",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T17:54:04.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Robot.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp",
+              "RelativeDocumentMoniker": "Robot.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Robot.cpp",
+              "RelativeToolTip": "Robot.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T17:52:20.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Monster.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp",
+              "RelativeDocumentMoniker": "Monster.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Monster.cpp",
+              "RelativeToolTip": "Monster.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T18:07:54.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bullet.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.cpp",
+              "RelativeDocumentMoniker": "Bullet.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.cpp",
+              "RelativeToolTip": "Bullet.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T18:18:26.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.h",
+              "RelativeDocumentMoniker": "Bullet.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Bullet.h",
+              "RelativeToolTip": "Bullet.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:10:22.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Collider.cpp",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.cpp",
+              "RelativeDocumentMoniker": "Collider.cpp",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Collider.cpp",
+              "RelativeToolTip": "Collider.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-14T18:07:14.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Item.h",
+              "DocumentMoniker": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Item.h",
+              "RelativeDocumentMoniker": "Item.h",
+              "ToolTip": "E:\\github rgst\\2024OpenGLProject\\OpenGl_Game\\Item.h",
+              "RelativeToolTip": "Item.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-14T18:12:59.719Z",
               "EditorCaption": ""
             }
           ]

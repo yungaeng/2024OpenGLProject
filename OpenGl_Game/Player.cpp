@@ -2,15 +2,20 @@
 #include "Model.h"
 #include "Gun.h"
 #include "CameraManager.h"
+#include "Healpack.h"
+#include "Collider.h"
 
 Player::Player() : _curgun(nullptr) {
     // 플레이어의 파츠를 추가합니다.
     Cube* body = new Cube();
     Cube* head = new Cube();
+
     addPart(body);
     addPart(head);
 	_objectpos = CameraManager::getInstance().getPosition();
     _hp = 0;
+
+    body->initCollider();
 }
 
 Player::~Player()
@@ -29,7 +34,6 @@ void Player::update(float deltaTime) {
         _curgun->update(deltaTime);
     }
 
-
 }
 
 void Player::draw(GLuint shaderProgramID)
@@ -42,5 +46,16 @@ void Player::setGun(Gun* gun) {
 
 Gun* Player::getGun() const {
     return _curgun;
+}
+
+void Player::OnCollisionEnter(Collider* _pOther)
+{
+    // 충돌한 객체의 소유자를 가져옵니다.
+    Object* otherObject = _pOther->GetCube()->_owner;
+    if (Healpack* healpack = dynamic_cast<Healpack*>(otherObject))
+    {
+        // 플레이어의 체력을 회복합니다
+        SetHp(100);
+    }
 }
 
