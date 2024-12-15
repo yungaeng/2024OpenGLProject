@@ -9,7 +9,7 @@ public:
 	virtual ~Player();
     virtual void update(float deltaTime) override;
 	virtual void draw(GLuint shaderProgramID) override;
-    void setGun(Gun* gun);
+    void setGun(int a);
     
     Gun* getGun() const;
 

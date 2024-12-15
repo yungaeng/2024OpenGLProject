@@ -25,7 +25,8 @@ public:
     virtual void OnCollisionEnter(Collider* _pOther) {}
     virtual void OnCollision(Collider* _pOther) {}
     virtual void OnCollisionExit(Collider* _pOther) {}
-    
+	void setObjectPos(vec3 pos) { _objectpos = pos; }
+    vec3 getObjectPos();
 protected:
     std::vector<Cube*> _parts;
 	string _name;

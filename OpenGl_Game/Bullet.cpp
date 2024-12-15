@@ -23,6 +23,11 @@ Bullet::Bullet(vec3 position, vec3 direction, float speed, float damage)
     // _body 초기화
     _body->_owner = this;
     _body->_trs = glm::translate(glm::mat4(1.0f), _objectpos);
+    // 카메라의 방향에 맞게 큐브의 방향 설정
+    vec3 up = vec3(0.0f, 1.0f, 0.0f); // 월드 업 벡터
+    vec3 right = glm::normalize(glm::cross(up, _direction));
+    vec3 adjustedUp = glm::cross(_direction, right);
+    _body->_rot = glm::mat4(vec4(right, 0.0f), vec4(adjustedUp, 0.0f), vec4(_direction, 0.0f), vec4(0.0f, 0.0f, 0.0f, 1.0f));
     _body->_scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f)); // 총알 크기 설정
 	_body->_FT = _body->_trs * _body->_rot * _body->_scale;
     _body->setColor(vec3(1.0f, 0.0f, 0.0f)); // 총알 색상 설정
@@ -35,8 +40,7 @@ Bullet::Bullet(vec3 position, vec3 direction, float speed, float damage)
 
 Bullet::~Bullet() 
 {
-    // 필요한 경우 리소스 해제
-    delete _body;
+	delete _body;
 }
 
 void Bullet::update(float deltaTime) {
@@ -54,17 +58,19 @@ void Bullet::update(float deltaTime) {
         _body->updateCollider();
     
     // 범위를 벗어나면 객체 제거
-    if (isOutOfRange()) {
+    if (isOutOfRange() && m_bAlive == true) {
+        SetDead();
 		DeleteObject(this);
     }
 }
 
+extern bool render_aabb;
 void Bullet::draw(GLuint shaderProgramID) {
     // 총알 그리기
     glUniformMatrix4fv(glGetUniformLocation(shaderProgramID, "model"), 1, GL_FALSE, glm::value_ptr(_body->_FT));
     _body->Draw(shaderProgramID);
 
-    if (_body->_collider != nullptr && m_bAlive)
+    if (_body->_collider != nullptr && m_bAlive && render_aabb)
     {
         _body->_collider->renderAABB(shaderProgramID);
     }
@@ -76,12 +82,20 @@ bool Bullet::isOutOfRange() const {
 
 void Bullet::OnCollisionEnter(Collider* _pOther)
 {
+
     // 충돌한 객체의 소유자를 가져옵니다.
     Object* otherObject = _pOther->GetCube()->_owner;
-    if (Robot* robot = dynamic_cast<Robot*>(otherObject)) {
-        // 로봇에 데미지를 입힙니다.
-        //robot->TakeDamage(_damage);
-        // Bullet은 소멸합니다.
+    if (Monster* Mon = dynamic_cast<Monster*>(otherObject)) {
+		if (_pOther->GetCube()->_name == "head")
+			Mon->SetHp(Mon->getHp() - _damage * 2);
+        else
+			Mon->SetHp(Mon->getHp() - _damage);
+		if (Mon->getHp() <= 0)
+		{
+			Mon->SetDead();
+			DeleteObject(Mon);
+		}
+        this->SetDead();
         DeleteObject(this);
     }
 }

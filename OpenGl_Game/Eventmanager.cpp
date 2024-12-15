@@ -18,7 +18,8 @@ void EventMgr::update()
 	// ==============================================
 	// 이전 프레임에서 등록해 둔 Dead Object 들을 삭제한다
 	// ==============================================
-	for (size_t i = 0; i < m_vecDead.size(); ++i)
+	size_t size = m_vecDead.size();
+	for (size_t i = 0; i < size; ++i)
 	{
 		if (m_vecDead[i] != nullptr)
 		{
@@ -53,7 +54,7 @@ void EventMgr::Excute(const tEvent& _eve)
 		GROUP_TYPE eType = (GROUP_TYPE)_eve.wParam;
 		SceneManager::getInstance().AddObject(pNewObj, eType);
 	}
-
+	
 	break;
 	case EVENT_TYPE::DELETE_OBJECT:
 	{

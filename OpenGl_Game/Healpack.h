@@ -21,6 +21,9 @@ private:
     Cube* body;
     Cube* cross;
 
+	float random_xpos;
+    float zpos;
+
     void initializeParts();
     void updatePartTransforms();
     float _range = 100.f;

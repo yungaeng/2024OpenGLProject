@@ -11,6 +11,8 @@ public:
 	virtual void OnCollisionEnter(Collider* _pOther) override {};
 	virtual void OnCollision(Collider* _pOther) override {};
 	virtual void OnCollisionExit(Collider* _pOther) override {};
+	void SetHp(int hp) { _hp = hp; }
+	int getHp() { return _hp; }
 protected:
 	string			_name;
 	float			_speed;

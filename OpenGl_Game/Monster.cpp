@@ -8,6 +8,7 @@ Monster::Monster() {
 }
 
 void Monster::update(float deltaTime) {
+    
     // 몬스터의 업데이트 로직을 여기에 추가합니다.
 }
 

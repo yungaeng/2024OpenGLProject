@@ -14,6 +14,9 @@
 
 #pragma once
 
+// Define GLM_ENABLE_EXPERIMENTAL to use experimental extensions
+#define GLM_ENABLE_EXPERIMENTAL
+
 // Dependencies
 #include "../detail/setup.hpp"
 #include "../detail/qualifier.hpp"
@@ -61,7 +64,7 @@ namespace glm
 	template<typename genType>
 	GLM_FUNC_DECL typename genType::value_type compMax(genType const& v);
 
-    /// Find the minimum float between single vector components.
+	/// Find the minimum float between single vector components.
 	/// @see gtx_component_wise
 	template<typename genType>
 	GLM_FUNC_DECL typename genType::value_type fcompMin(genType const& v);

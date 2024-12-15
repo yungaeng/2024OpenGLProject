@@ -54,7 +54,8 @@ Model::Model(Model_Type type)
 }
 
 Model::~Model() {
-    delete _collider;
+	if (_collider != nullptr)
+        delete _collider;
 }
 
 
@@ -95,6 +96,10 @@ Cube::Cube(string name)
     glGenBuffers(6, EBOs);
     _face_indices.resize(6);
 
+}
+
+Cube::~Cube()
+{
 }
 
 
@@ -262,6 +267,8 @@ void Cube::OnCollisionEnter(Collider* _pOther)
 {
     if (_owner != nullptr) {
         _owner->OnCollisionEnter(_pOther);
+        if (dynamic_cast<Bullet*>(_pOther->GetCube()->_owner) != nullptr && this->_name == "head")
+		this->setColor(vec3(1.0f, 0.0f, 0.0f));
     }
 }
 

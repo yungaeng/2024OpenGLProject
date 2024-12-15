@@ -92,9 +92,11 @@ void CameraManager::moveForward(float deltaTime) {
 }
 
 void CameraManager::moveBackward(float deltaTime) {
-    glm::vec3 direction = glm::normalize(glm::vec3(0.f, 0.f, -1.f));
-    position -= direction * speed * deltaTime;
-    target -= direction * speed * deltaTime;
+    if (position.z <= 5.0f) {
+        glm::vec3 direction = glm::normalize(glm::vec3(0.f, 0.f, -1.f));
+        position -= direction * speed * deltaTime;
+        target -= direction * speed * deltaTime;
+    }
 }
 
 void CameraManager::moveLeft(float deltaTime) {

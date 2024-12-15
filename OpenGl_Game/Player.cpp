@@ -1,9 +1,15 @@
 #include "Player.h"
 #include "Model.h"
 #include "Gun.h"
+#include "RPG.h"
+#include "ShotGun.h"
+#include "Rifle.h"
 #include "CameraManager.h"
+#include "SceneManager.h"
+#include "KeyManager.h"
 #include "Healpack.h"
 #include "Collider.h"
+#include "func.h"
 
 Player::Player() : _curgun(nullptr) {
     // 플레이어의 파츠를 추가합니다.
@@ -13,7 +19,10 @@ Player::Player() : _curgun(nullptr) {
     addPart(body);
     addPart(head);
 	_objectpos = CameraManager::getInstance().getPosition();
-    _hp = 0;
+    _hp = 5;
+
+	_curgun = new Rifle();
+	SceneManager::getInstance().AddObject(_curgun, GROUP_TYPE::GUN);
 
     body->initCollider();
 }
@@ -29,19 +38,31 @@ Player::~Player()
 void Player::update(float deltaTime) {
     // 플레이어의 업데이트 로직을 여기에 추가합니다.
     _objectpos = CameraManager::getInstance().getPosition();
-
-    if (_curgun) {
-        _curgun->update(deltaTime);
-    }
-
+   
+	//_curgun->update(deltaTime);
 }
 
 void Player::draw(GLuint shaderProgramID)
 {
+	//_curgun->draw(shaderProgramID);
 }
 
-void Player::setGun(Gun* gun) {
-    this->_curgun = gun;
+void Player::setGun(int a) {
+    DeleteObject(_curgun);
+    if(a == 0)
+	{
+		_curgun = new Rifle();
+		
+	}
+	else if (a == 1)
+	{
+		_curgun = new ShotGun();
+	}
+	else if (a == 2)
+	{
+		_curgun = new RPG();
+	}
+	SceneManager::getInstance().AddObject(_curgun, GROUP_TYPE::GUN);
 }
 
 Gun* Player::getGun() const {
@@ -50,12 +71,6 @@ Gun* Player::getGun() const {
 
 void Player::OnCollisionEnter(Collider* _pOther)
 {
-    // 충돌한 객체의 소유자를 가져옵니다.
-    Object* otherObject = _pOther->GetCube()->_owner;
-    if (Healpack* healpack = dynamic_cast<Healpack*>(otherObject))
-    {
-        // 플레이어의 체력을 회복합니다
-        SetHp(100);
-    }
+
 }
 

@@ -19,6 +19,9 @@
 #include "ColMgr.h"
 #include "Healpack.h"
 #include "Eventmanager.h"
+#include "ShotGun.h"
+#include "RPG.h"
+#include "Bat.h"
 
 void setMousePosition(int x, int y) {
     // 마우스 위치를 설정하는 함수, 처음에 마우스 중앙 고정용도로 사용
@@ -65,6 +68,7 @@ GLchar* vertexSource, * fragmentSource; //--- 소스코드 저장 변수
 bool on_timer = false;
 bool on_light = true;
 bool firstMouse = true;
+bool render_aabb = false;
 
 TTM light_rot = Mode_Default;
 
@@ -139,7 +143,6 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
     glutSetCursor(GLUT_CURSOR_NONE);
 	// 화면 밖으로 나가지 않도록
 	
-
     // 프로그램 시작 시 마우스 위치를 윈도우 창의 정중앙으로 설정
     setMousePosition(window_x / 2 + 300, window_y / 2);
 
@@ -147,14 +150,14 @@ void main(int argc, char** argv) //--- 윈도우 출력하고 콜백함수 설�
 
     plight_cube = new Cube();
 	Player* player = new Player();
-	Rifle* rifle = new Rifle();
-	player->setGun(rifle);
 	SceneManager::getInstance().ResistPlayer(player);
-	SceneManager::getInstance().AddObject(player->getGun(),GROUP_TYPE::GUN);
+	SceneManager::getInstance().AddObject(player, GROUP_TYPE::PLAYER);
 	Robot* robot = new Robot();
+	Bat* bat = new Bat();
 	SceneManager::getInstance().AddObject(robot,GROUP_TYPE::MONSTER);
+	SceneManager::getInstance().AddObject(bat, GROUP_TYPE::MONSTER);
 	CollisionMgr::GetInst()->CheckGroup(GROUP_TYPE::GUN, GROUP_TYPE::MONSTER);
-
+	
 	// 12/09 힐팩 추가
 	Healpack* healpack = new Healpack();
 	SceneManager::getInstance().AddObject(healpack, GROUP_TYPE::ITEM);
@@ -241,9 +244,9 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
     unsigned int viewPosLocation = glGetUniformLocation(shaderProgramID, "viewPos"); //--- viewPos 값 전달: 카메라 위치
     glUniform3f(viewPosLocation, g_camerapos.x, g_camerapos.y, g_camerapos.z);
 
-    plight_cube->_trs = glm::translate(mat4(1.f), vec3(0.f, 0.0f, 0.f));
+    plight_cube->_trs = glm::translate(mat4(1.f), vec3(0.f, 0.0f, -20.f));
     plight_cube->_rot = glm::rotate(mat4(1.f), radians(light_theta), vec3(0.f, 1.f, 0.f));
-    plight_cube->_scale = glm::scale(mat4(1.f), vec3(3.f, 0.1f, 15.f));
+    plight_cube->_scale = glm::scale(mat4(1.f), vec3(5.f, 0.1f, 50.f));
     plight_cube->_FT = plight_cube->_rot * plight_cube->_trs * plight_cube->_scale * model;
     glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(plight_cube->_FT));
     plight_cube->Draw(shaderProgramID);
@@ -251,9 +254,6 @@ GLvoid drawScene() //--- 콜백 함수: 그리기 콜백 함수 {
 	SceneManager::getInstance().draw(shaderProgramID);
 
     glutSwapBuffers(); //--- 화면에 출력하기
-
-
-
 }
 
 GLvoid Reshape(int w, int h) //--- 콜백 함수: 다시 그리기 콜백 함수 {
@@ -275,14 +275,6 @@ GLvoid sp_Keyboard(int key, int x, int y)
 
 void InitBuffer()
 {
-
-
-	/*여러 다각형이 그려지지 않는 이유는
-	glGenVertexArrays 함수가 루프 내에서
-	반복 호출되기 때문일 수 있습니다.
-	이 함수는 새로운 VAO를 생성하고 vao1 배열에 저장합니다.
-	그러나 이 배열은 루프가 반복될 때마다 덮어쓰여지므로,
-	마지막 다각형만이 올바르게 그려질 수 있습니다.*/
 
 
     if (plight_cube != nullptr)
@@ -404,12 +396,12 @@ void UserTimerFunc(int value)
 void Idle()
 {
 	double elapsedTime = TimeManager::getInstance().GetElapsedTime();
-	if(KeyManager::getInstance().IsKeyPressed('q'))
-	{
-		glutLeaveMainLoop();
-	}
+
+	
 	CameraManager::getInstance().update(KeyManager::getInstance(), elapsedTime);
+
 	SceneManager::getInstance().update(elapsedTime);
+
 	CollisionMgr::GetInst()->update();
 
 	glutPostRedisplay();
@@ -419,6 +411,22 @@ void Idle()
 
 void KeyboardDown(unsigned char key, int x, int y) {
 	KeyManager::getInstance().KeyDown(key);
+	Player* p = SceneManager::getInstance().getPlayer();
+	if (KeyManager::getInstance().IsKeyPressed('q'))
+	{
+		glutLeaveMainLoop();
+	}
+	else if (KeyManager::getInstance().IsKeyPressed('1'))
+	{
+		p->setGun(0);
+	}
+	else if (KeyManager::getInstance().IsKeyPressed('2'))
+		p->setGun(1);
+	else if (KeyManager::getInstance().IsKeyPressed('3'))
+		p->setGun(2);
+	else if (KeyManager::getInstance().IsKeyPressed('e'))
+		render_aabb = !render_aabb;
+	
 }
 
 void KeyboardUp(unsigned char key, int x, int y) {

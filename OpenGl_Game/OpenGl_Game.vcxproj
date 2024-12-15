@@ -121,15 +121,18 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>glew32.lib freeglut.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bat.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="CameraManager.h" />
     <ClInclude Include="Collider.h" />
@@ -151,10 +154,14 @@
     <ClInclude Include="Polygon_18.h" />
     <ClInclude Include="Rifle.h" />
     <ClInclude Include="Robot.h" />
+    <ClInclude Include="RPG.h" />
+    <ClInclude Include="RPGProjectile.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ShotGun.h" />
     <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bat.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CameraManager.cpp" />
     <ClCompile Include="Collider.cpp" />
@@ -175,7 +182,10 @@
     <ClCompile Include="Polygon_18.cpp" />
     <ClCompile Include="Rifle.cpp" />
     <ClCompile Include="Robot.cpp" />
+    <ClCompile Include="RPG.cpp" />
+    <ClCompile Include="RPGProjectile.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ShotGun.cpp" />
     <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>

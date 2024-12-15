@@ -8,7 +8,7 @@
 
 Rifle::Rifle() {
     // Initialize rifle-specific stats
-    _damage = 10;
+    _damage = 50;
     _recoil = 0.2f;
     _accuracy = 1.f;
     _range = 100.0f;
@@ -113,6 +113,10 @@ void Rifle::Shoot() {
 	vec3 cameraPos = CameraManager::getInstance().getPosition();
 	vec3 cameraFront = CameraManager::getInstance().getFrontVector();
 	vec3 cameraUp = CameraManager::getInstance().getUpVector();
+	glm::normalize(cameraFront);
+	glm::normalize(cameraUp);
+	glm::normalize(cameraPos);
+
 	vec3 cameraRight = glm::cross(cameraFront, cameraUp);
 	vec3 bulletPos = cameraPos + cameraFront * 0.5f + cameraRight * 0.25f + cameraUp * -0.2f;
 	vec3 bulletDir = cameraFront;

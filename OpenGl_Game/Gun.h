@@ -15,7 +15,6 @@ class Gun : public Object {
 public:
     Gun();
 	virtual ~Gun();
-
 public:
     virtual void update(float deltaTime) override = 0;
 	virtual void Shoot() = 0;
@@ -25,7 +24,7 @@ public:
 public:
 	// gun stats
 	vec3 _target;
-	std::unique_ptr<Player> _owner;
+	std::unique_ptr<Player> _player;
 	unsigned int _damage;
 	float _recoil;
 	float _accuracy;

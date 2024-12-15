@@ -96,6 +96,7 @@ public:
 public:
     Cube();
     Cube(string name);
+	~Cube() override; 
 
 public:
 

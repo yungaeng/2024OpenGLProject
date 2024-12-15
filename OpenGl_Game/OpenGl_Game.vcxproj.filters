@@ -91,6 +91,9 @@
     <Filter Include="소스 파일\04. Function">
       <UniqueIdentifier>{8583546c-14fe-4407-a4d5-a04f31505174}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\03. Model\Object\Monster\Bat">
+      <UniqueIdentifier>{24f425a8-aeb2-4cb2-a9f4-128f1a0d5753}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="component_18.h">
@@ -162,6 +165,18 @@
     <ClInclude Include="func.h">
       <Filter>소스 파일\04. Function</Filter>
     </ClInclude>
+    <ClInclude Include="ShotGun.h">
+      <Filter>소스 파일\03. Model\Object\Gun\2. Shotgun</Filter>
+    </ClInclude>
+    <ClInclude Include="RPG.h">
+      <Filter>소스 파일\03. Model\Object\Gun\3. RPG</Filter>
+    </ClInclude>
+    <ClInclude Include="RPGProjectile.h">
+      <Filter>소스 파일\03. Model\Object\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Bat.h">
+      <Filter>소스 파일\03. Model\Object\Monster\Bat</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -229,6 +244,18 @@
     </ClCompile>
     <ClCompile Include="func.cpp">
       <Filter>소스 파일\04. Function</Filter>
+    </ClCompile>
+    <ClCompile Include="ShotGun.cpp">
+      <Filter>소스 파일\03. Model\Object\Gun\2. Shotgun</Filter>
+    </ClCompile>
+    <ClCompile Include="RPG.cpp">
+      <Filter>소스 파일\03. Model\Object\Gun\3. RPG</Filter>
+    </ClCompile>
+    <ClCompile Include="RPGProjectile.cpp">
+      <Filter>소스 파일\03. Model\Object\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Bat.cpp">
+      <Filter>소스 파일\03. Model\Object\Monster\Bat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
